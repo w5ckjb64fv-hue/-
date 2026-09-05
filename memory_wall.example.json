@@ -1,0 +1,23 @@
+{
+  "schema": "origin-cogov-memory-wall",
+  "schema_version": 1,
+  "product_version": "8.0",
+  "updated_at": "2026-08-28T00:00:00+00:00",
+  "memories": [
+    {
+      "id": "example-run-id",
+      "created_at": "2026-08-28T10:30:00+08:00",
+      "mode": "normal",
+      "mode_name": "普通模式",
+      "profile": "协同公共价值型治理者",
+      "achievement": "协同筑桥者",
+      "quote": "你在创新效率、资产边界与公众可及之间留下了一条可以继续协商的治理路径。",
+      "style": "实际",
+      "total": 82,
+      "top_metric": "多元协同",
+      "top_value": 90,
+      "events": 10,
+      "seed": null
+    }
+  ]
+}

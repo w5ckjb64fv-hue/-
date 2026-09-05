@@ -1,0 +1,5007 @@
+{
+  "product": {
+    "name": "原点·共治 V8",
+    "subtitle": "AI原生街区公共价值治理推演平台",
+    "tagline": "双模式治理沙盘 × JSON回忆档案 × 五方群聊 × 扩展图文与文献知识库。",
+    "version": "8.0"
+  },
+  "source_note": "案例事实来自团队案例分析《“烟火旧楼”何以成为“智能活力街区”？——以北京市海淀区 AI 原点社区为例》。普通模式仅使用15张原有案例卡；自由模式新增35张“情景推演卡”，并启用时间种子与状态触发。情景参数、指数变化与AI输出均为教学推演机制，不代表真实统计或政策结论。",
+  "initial_scores": {
+    "asset": 50,
+    "innovation": 50,
+    "collaboration": 50,
+    "openness": 50,
+    "public_value": 50
+  },
+  "metrics": {
+    "asset": "资产可持续",
+    "innovation": "创新活力",
+    "collaboration": "多元协同",
+    "openness": "空间开放",
+    "public_value": "公众获得感"
+  },
+  "initial_conditions": {
+    "capital_resilience": 55,
+    "tenant_stability": 55,
+    "execution_capacity": 55,
+    "street_capacity": 58,
+    "public_trust": 52,
+    "spillover": 45
+  },
+  "condition_metrics": {
+    "capital_resilience": {
+      "name": "资金韧性",
+      "hint": "越高表示越能承受持续投入与机会成本"
+    },
+    "tenant_stability": {
+      "name": "租户稳定",
+      "hint": "越高表示既有租户关系与经营连续性越稳定"
+    },
+    "execution_capacity": {
+      "name": "执行能力",
+      "hint": "越高表示跨部门、运营与空间调整更容易落地"
+    },
+    "street_capacity": {
+      "name": "街区承载",
+      "hint": "越高表示步行、停车、配送等公共空间承载更充分"
+    },
+    "public_trust": {
+      "name": "公众信任",
+      "hint": "越高表示居民和公众更愿意理解、进入并参与"
+    },
+    "spillover": {
+      "name": "资源外溢",
+      "hint": "越高表示创新资源更能从核心节点传递到周边"
+    }
+  },
+  "scenario_controls": [
+    {
+      "id": "growth",
+      "name": "产业增长速度",
+      "labels": [
+        "温和",
+        "中等",
+        "快速"
+      ],
+      "default": 2,
+      "desc": "越快，创新机会更多，但人流和空间承载压力更早出现。"
+    },
+    {
+      "id": "capital_pressure",
+      "name": "资金约束强度",
+      "labels": [
+        "宽松",
+        "中等",
+        "紧张"
+      ],
+      "default": 2,
+      "desc": "越紧张，项目更需要控制机会成本和投入节奏。"
+    },
+    {
+      "id": "openness_demand",
+      "name": "公共开放诉求",
+      "labels": [
+        "较低",
+        "中等",
+        "较高"
+      ],
+      "default": 2,
+      "desc": "越高，公众对可进入空间、活动可及和日常便利的期待越强。"
+    },
+    {
+      "id": "coordination_difficulty",
+      "name": "协同难度",
+      "labels": [
+        "较低",
+        "中等",
+        "较高"
+      ],
+      "default": 2,
+      "desc": "越高，多产权、多部门和多主体之间达成一致越困难。"
+    }
+  ],
+  "roles": [
+    {
+      "id": "government",
+      "name": "政府",
+      "icon": "🏛️",
+      "concern": "城市功能、产业发展、公共利益与跨部门协同",
+      "preference": {
+        "asset": 62,
+        "innovation": 82,
+        "collaboration": 92,
+        "openness": 72,
+        "public_value": 88
+      },
+      "memory_seed": {
+        "trust": 55,
+        "commitments": [],
+        "conditions": [],
+        "concerns": [
+          "城市功能、产业发展、公共利益与跨部门协同"
+        ],
+        "last_support": 3,
+        "last_position": "",
+        "events_seen": 0
+      },
+      "decision_rule": "优先判断方案能否同时回应产业目标、城市功能、公共利益与制度可执行性；倾向用规则、协调机制和阶段评估降低冲突。",
+      "risk_attitude": "中等风险承受，允许试点创新，但不能接受公共风险失控或跨部门责任长期悬空。",
+      "evidence_focus": [
+        "政策目标是否一致",
+        "跨部门责任是否明确",
+        "公众收益是否可解释",
+        "是否具备复制与复盘机制"
+      ],
+      "red_lines": [
+        "明显损害公共安全",
+        "责任主体长期不清",
+        "只有产业收益而无法说明公共价值"
+      ],
+      "preferred_tools": [
+        "试点",
+        "联席协调",
+        "阶段评估",
+        "公开反馈",
+        "规则标准"
+      ],
+      "speaking_style": "从整体治理和制度可持续角度论证，常追问责任边界、公共目标和长期外溢。"
+    },
+    {
+      "id": "collective",
+      "name": "集体经济组织",
+      "icon": "🏢",
+      "concern": "集体资产安全、现金流、投入风险与长期收益",
+      "preference": {
+        "asset": 96,
+        "innovation": 65,
+        "collaboration": 72,
+        "openness": 42,
+        "public_value": 58
+      },
+      "memory_seed": {
+        "trust": 55,
+        "commitments": [],
+        "conditions": [],
+        "concerns": [
+          "集体资产安全、现金流、投入风险与长期收益"
+        ],
+        "last_support": 3,
+        "last_position": "",
+        "events_seen": 0
+      },
+      "decision_rule": "先算资产安全、现金流、机会成本和回收周期，再判断是否值得用短期收益换长期增值；对没有成本边界的公共承诺保持警惕。",
+      "risk_attitude": "偏谨慎，愿意承担可量化、可退出的风险，不接受无限兜底。",
+      "evidence_focus": [
+        "租金和现金流",
+        "资本开支",
+        "机会成本",
+        "资产保值增值",
+        "退出条件"
+      ],
+      "red_lines": [
+        "投入无上限",
+        "长期占用高价值空间却没有复盘",
+        "维护成本全部由集体资产承担"
+      ],
+      "preferred_tools": [
+        "预算上限",
+        "分期投入",
+        "收益分成",
+        "退出阈值",
+        "资产绩效评估"
+      ],
+      "speaking_style": "像资产所有者和财务负责人，常用“谁出钱、多久回收、最坏情况谁承担”组织论证。"
+    },
+    {
+      "id": "operator",
+      "name": "运营方",
+      "icon": "🧭",
+      "concern": "施工运营、招商、空间使用效率与日常协调",
+      "preference": {
+        "asset": 78,
+        "innovation": 70,
+        "collaboration": 88,
+        "openness": 64,
+        "public_value": 66
+      },
+      "memory_seed": {
+        "trust": 55,
+        "commitments": [],
+        "conditions": [],
+        "concerns": [
+          "施工运营、招商、空间使用效率与日常协调"
+        ],
+        "last_support": 3,
+        "last_position": "",
+        "events_seen": 0
+      },
+      "decision_rule": "把方案拆成施工、招商、活动、交通、安保、维护和客户沟通，判断现场是否执行得动；偏好规则清楚、责任可落地的渐进方案。",
+      "risk_attitude": "务实型，反对概念很好但现场无法执行的方案。",
+      "evidence_focus": [
+        "人员配置",
+        "施工和运营冲突",
+        "峰值客流",
+        "维护成本",
+        "流程复杂度",
+        "投诉反馈"
+      ],
+      "red_lines": [
+        "任务无限叠加",
+        "开放规则模糊",
+        "没有责任人的跨主体事项"
+      ],
+      "preferred_tools": [
+        "SOP",
+        "分时分区",
+        "预约容量",
+        "责任清单",
+        "工单和反馈闭环"
+      ],
+      "speaking_style": "从现场执行细节切入，常指出“谁来做、什么时候做、峰值时会不会崩”。"
+    },
+    {
+      "id": "startup",
+      "name": "创业企业",
+      "icon": "🚀",
+      "concern": "低成本空间、资源连接、算力融资与合作机会",
+      "preference": {
+        "asset": 48,
+        "innovation": 98,
+        "collaboration": 80,
+        "openness": 56,
+        "public_value": 54
+      },
+      "memory_seed": {
+        "trust": 55,
+        "commitments": [],
+        "conditions": [],
+        "concerns": [
+          "低成本空间、资源连接、算力融资与合作机会"
+        ],
+        "last_support": 3,
+        "last_position": "",
+        "events_seen": 0
+      },
+      "decision_rule": "优先看是否提高资源密度和连接效率，包括算力、融资、人才、客户、科研成果和展示机会；反对为了形式开放稀释专业网络。",
+      "risk_attitude": "高风险偏好，但对时间成本、资源稀释和制度不确定性敏感。",
+      "evidence_focus": [
+        "合作转化率",
+        "融资和算力可获得性",
+        "人才密度",
+        "试用场景",
+        "企业成长速度"
+      ],
+      "red_lines": [
+        "资源平均主义导致核心服务变弱",
+        "审批拖慢创新速度",
+        "活动很多但没有真实连接"
+      ],
+      "preferred_tools": [
+        "资源撮合",
+        "快速试点",
+        "企业服务接口",
+        "场景验证",
+        "导师和投资人网络"
+      ],
+      "speaking_style": "从创业速度和机会窗口出发，强调资源密度、迭代效率与真实合作结果。"
+    },
+    {
+      "id": "public",
+      "name": "居民与公众",
+      "icon": "👨‍👩‍👧",
+      "concern": "安全通行、空间可进入、活动可及与日常便利",
+      "preference": {
+        "asset": 34,
+        "innovation": 48,
+        "collaboration": 72,
+        "openness": 94,
+        "public_value": 100
+      },
+      "memory_seed": {
+        "trust": 55,
+        "commitments": [],
+        "conditions": [],
+        "concerns": [
+          "安全通行、空间可进入、活动可及与日常便利"
+        ],
+        "last_support": 3,
+        "last_position": "",
+        "events_seen": 0
+      },
+      "decision_rule": "先判断普通人是否能安全、方便、持续地使用空间和服务，以及成本、噪声、拥堵等负担是否公平；对“名义开放”保持怀疑。",
+      "risk_attitude": "对生活干扰和安全风险较敏感，但如果收益具体可感知，愿意接受合理的专业优先安排。",
+      "evidence_focus": [
+        "步行和交通安全",
+        "开放时段",
+        "活动可及性",
+        "噪声和拥堵",
+        "家庭与老人儿童使用体验",
+        "反馈是否有效"
+      ],
+      "red_lines": [
+        "通行和安全受损",
+        "只对专业人士开放却宣称公共",
+        "公众意见没有反馈出口"
+      ],
+      "preferred_tools": [
+        "固定公众时段",
+        "社区共议",
+        "公开反馈",
+        "无障碍设计",
+        "生活场景活动"
+      ],
+      "speaking_style": "从日常体验和公平感出发，用具体使用场景质疑宏大叙事，关注谁真正获得、谁承担代价。"
+    }
+  ],
+  "stages": [
+    {
+      "id": 1,
+      "label": "方向选择",
+      "candidates": [
+        1,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "id": 2,
+      "label": "风险组织",
+      "candidates": [
+        2,
+        20,
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "id": 3,
+      "label": "渐进更新",
+      "candidates": [
+        3,
+        24,
+        25,
+        26,
+        27
+      ]
+    },
+    {
+      "id": 4,
+      "label": "空间分配",
+      "candidates": [
+        4,
+        28,
+        29,
+        30,
+        31
+      ]
+    },
+    {
+      "id": 5,
+      "label": "资源组织",
+      "candidates": [
+        5,
+        6,
+        32,
+        33,
+        34
+      ]
+    },
+    {
+      "id": 6,
+      "label": "活力承载",
+      "candidates": [
+        7,
+        8,
+        35,
+        36,
+        37
+      ]
+    },
+    {
+      "id": 7,
+      "label": "公众关系",
+      "candidates": [
+        9,
+        10,
+        38,
+        39,
+        40
+      ]
+    },
+    {
+      "id": 8,
+      "label": "协同机制",
+      "candidates": [
+        11,
+        12,
+        41,
+        42,
+        43
+      ]
+    },
+    {
+      "id": 9,
+      "label": "资源扩散",
+      "candidates": [
+        13,
+        14,
+        44,
+        45,
+        46
+      ]
+    },
+    {
+      "id": 10,
+      "label": "由点及面",
+      "candidates": [
+        15,
+        47,
+        48,
+        49,
+        50
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "chapter": "旧困 → 破局",
+      "title": "商超退潮：一万余平方米空间怎么办？",
+      "situation": "2021年前后，原有商超业态逐步衰退，客流减少，部分空间闲置。继续传统商业收益不稳，全部改普通写字楼风险较低，但难以发挥毗邻高校与科技园的区位优势。",
+      "fact": "案例中的实际路径，是将人工智能确定为新方向，并把部分原商超空间改为展厅、路演、共享办公和企业服务空间。",
+      "question": "如果由你决定，这栋旧楼第一步怎么走？",
+      "options": [
+        {
+          "id": "A",
+          "label": "继续做传统商业",
+          "desc": "通过餐饮、零售、农贸等方式恢复客流，优先保住熟悉的租金模式。",
+          "delta": {
+            "asset": 5,
+            "innovation": -8,
+            "collaboration": -2,
+            "openness": 0,
+            "public_value": -2
+          },
+          "condition_delta": {
+            "capital_resilience": 4,
+            "tenant_stability": 3,
+            "execution_capacity": 2,
+            "street_capacity": 0,
+            "public_trust": -1,
+            "spillover": -3
+          }
+        },
+        {
+          "id": "B",
+          "label": "全部改普通写字楼",
+          "desc": "用标准办公出租降低经营复杂度，尽快恢复稳定租金。",
+          "delta": {
+            "asset": 7,
+            "innovation": 0,
+            "collaboration": -2,
+            "openness": -4,
+            "public_value": -2
+          },
+          "condition_delta": {
+            "capital_resilience": 6,
+            "tenant_stability": -2,
+            "execution_capacity": 2,
+            "street_capacity": 0,
+            "public_trust": -1,
+            "spillover": -2
+          }
+        },
+        {
+          "id": "C",
+          "label": "转向AI交往型空间",
+          "desc": "牺牲部分短期租金，引入展示、交流、共享办公与企业服务。",
+          "delta": {
+            "asset": -3,
+            "innovation": 12,
+            "collaboration": 8,
+            "openness": 8,
+            "public_value": 6
+          },
+          "condition_delta": {
+            "capital_resilience": -6,
+            "tenant_stability": -3,
+            "execution_capacity": -2,
+            "street_capacity": -4,
+            "public_trust": 5,
+            "spillover": 5
+          }
+        }
+      ],
+      "case_choice": "C",
+      "case_result": "真实案例选择了人工智能方向。旧楼不再只承担出租功能，而开始承接企业孵化、展示、交流和资源对接。",
+      "source_section": "二（一）舍弃熟路：旧楼转向交往型空间",
+      "when": [],
+      "branch_note": "",
+      "event_type": "案例主线",
+      "special": false,
+      "random_weight": 1.0,
+      "stage_id": 1
+    },
+    {
+      "id": 2,
+      "chapter": "风险承担",
+      "title": "资金悬空：谁为不确定的转型先行担责？",
+      "situation": "改造要建设展厅、会议室、路演区和共享空间，还会把部分可出租面积改成公共交流空间。前期投入和未来招商都存在不确定性。",
+      "fact": "案例记载：项目以未来五年经营收益为支撑，贷款约1亿元；原有资金约七八千万元，扣除日常支出后，实际可投入改造约5000万元。",
+      "question": "面对前期投入和未来招商不确定性，你会如何组织风险？",
+      "options": [
+        {
+          "id": "A",
+          "label": "等待更确定的外部资金",
+          "desc": "降低前期财务风险，但转型窗口和空间活化被推迟。",
+          "delta": {
+            "asset": 4,
+            "innovation": -6,
+            "collaboration": -3,
+            "openness": -2,
+            "public_value": -2
+          },
+          "condition_delta": {
+            "capital_resilience": 6,
+            "tenant_stability": 3,
+            "execution_capacity": -4,
+            "street_capacity": 1,
+            "public_trust": -2,
+            "spillover": -2
+          }
+        },
+        {
+          "id": "B",
+          "label": "集体先投 + 多主体分工",
+          "desc": "产权主体承担首轮风险，运营方落地，政府统筹产业方向与资源。",
+          "delta": {
+            "asset": -3,
+            "innovation": 10,
+            "collaboration": 12,
+            "openness": 4,
+            "public_value": 5
+          },
+          "condition_delta": {
+            "capital_resilience": -8,
+            "tenant_stability": 0,
+            "execution_capacity": 7,
+            "street_capacity": 0,
+            "public_trust": 4,
+            "spillover": 4
+          }
+        },
+        {
+          "id": "C",
+          "label": "整体交给外部开发主体",
+          "desc": "快速转移投入压力，但本地主体对空间目标与公共价值的控制减弱。",
+          "delta": {
+            "asset": 6,
+            "innovation": 3,
+            "collaboration": -6,
+            "openness": -5,
+            "public_value": -5
+          },
+          "condition_delta": {
+            "capital_resilience": 7,
+            "tenant_stability": -4,
+            "execution_capacity": 4,
+            "street_capacity": 0,
+            "public_trust": -5,
+            "spillover": -2
+          }
+        }
+      ],
+      "case_choice": "B",
+      "case_result": "案例采取了产权主体、运营方与属地政府分工协同的方式：风险没有消失，但避免由单一主体独自承担。",
+      "source_section": "二（二）押上收益：集体经济承担首轮风险",
+      "when": [],
+      "branch_note": "",
+      "event_type": "案例主线",
+      "special": false,
+      "random_weight": 1.0,
+      "stage_id": 2
+    },
+    {
+      "id": 3,
+      "chapter": "渐进更新",
+      "title": "租户未退：更新不能按下暂停键",
+      "situation": "楼内仍有企业办公和商户经营。一次性清空施工更快，却会集中终止租赁关系、让经营收入突然中断；边经营边改造更复杂，需要持续沟通。",
+      "fact": "运营方实际采用分段施工、边营边改，并对租户分类处理：可适应新方向的尽量保留，有条件的帮助转型，难以衔接的逐步迁出。",
+      "question": "你如何在“改得快”和“冲击小”之间选择？",
+      "options": [
+        {
+          "id": "A",
+          "label": "整体清空后快速施工",
+          "desc": "工期更可控，但租户损失与经营中断集中发生。",
+          "delta": {
+            "asset": 2,
+            "innovation": 6,
+            "collaboration": -10,
+            "openness": 1,
+            "public_value": -9
+          },
+          "condition_delta": {
+            "capital_resilience": 1,
+            "tenant_stability": -14,
+            "execution_capacity": 5,
+            "street_capacity": 0,
+            "public_trust": -8,
+            "spillover": 0
+          }
+        },
+        {
+          "id": "B",
+          "label": "边营边改 + 分类过渡",
+          "desc": "通过沟通、过渡与分类调整平衡既有利益和未来功能。",
+          "delta": {
+            "asset": 1,
+            "innovation": 7,
+            "collaboration": 11,
+            "openness": 4,
+            "public_value": 9
+          },
+          "condition_delta": {
+            "capital_resilience": -2,
+            "tenant_stability": 10,
+            "execution_capacity": -3,
+            "street_capacity": 0,
+            "public_trust": 8,
+            "spillover": 2
+          }
+        },
+        {
+          "id": "C",
+          "label": "暂缓改造，等租约自然结束",
+          "desc": "短期摩擦小，但转型周期显著拉长。",
+          "delta": {
+            "asset": 3,
+            "innovation": -7,
+            "collaboration": 1,
+            "openness": -2,
+            "public_value": 0
+          },
+          "condition_delta": {
+            "capital_resilience": 4,
+            "tenant_stability": 7,
+            "execution_capacity": -5,
+            "street_capacity": 1,
+            "public_trust": 0,
+            "spillover": -2
+          }
+        }
+      ],
+      "case_choice": "B",
+      "case_result": "真实案例强调“逐步更新”和“平衡既有利益和未来利益”，体现了渐进协调的更新路径。",
+      "source_section": "二（三）边营边改：既有利益与未来功能同步协调",
+      "when": [],
+      "branch_note": "",
+      "event_type": "案例主线",
+      "special": false,
+      "random_weight": 1.0,
+      "stage_id": 3
+    },
+    {
+      "id": 4,
+      "chapter": "黄金铺面",
+      "title": "一层四千余平方米：租金还是交往空间？",
+      "situation": "五道口核心地段的一层铺面具有较高租赁价值。把它出租可以获得更直接的租金，把它做成展陈、会客和交流空间，则会产生明显机会成本。",
+      "fact": "案例中，运营方只保留少量商业面积，其余用于展陈、会客和交流，并明确认为如果全部用于普通租赁，就不会形成今天的集聚效应和影响力。",
+      "question": "你会如何分配这块最有价值的一层空间？",
+      "options": [
+        {
+          "id": "A",
+          "label": "大部分用于高租金商业",
+          "desc": "强化即时现金流，公共交往空间控制在最低限度。",
+          "delta": {
+            "asset": 10,
+            "innovation": -3,
+            "collaboration": -2,
+            "openness": -8,
+            "public_value": -7
+          },
+          "condition_delta": {
+            "capital_resilience": 9,
+            "tenant_stability": 2,
+            "execution_capacity": 3,
+            "street_capacity": 1,
+            "public_trust": -6,
+            "spillover": -3
+          }
+        },
+        {
+          "id": "B",
+          "label": "商业与公共交流各占一半",
+          "desc": "以较均衡的方式控制机会成本和开放收益。",
+          "delta": {
+            "asset": 4,
+            "innovation": 5,
+            "collaboration": 5,
+            "openness": 5,
+            "public_value": 5
+          },
+          "condition_delta": {
+            "capital_resilience": 3,
+            "tenant_stability": 2,
+            "execution_capacity": 0,
+            "street_capacity": -1,
+            "public_trust": 4,
+            "spillover": 3
+          }
+        },
+        {
+          "id": "C",
+          "label": "优先配置展示交流空间",
+          "desc": "主动放弃部分即时租金，换取企业展示、创业交往和公众进入。",
+          "delta": {
+            "asset": -5,
+            "innovation": 11,
+            "collaboration": 8,
+            "openness": 12,
+            "public_value": 9
+          },
+          "condition_delta": {
+            "capital_resilience": -8,
+            "tenant_stability": 0,
+            "execution_capacity": -2,
+            "street_capacity": -3,
+            "public_trust": 7,
+            "spillover": 6
+          }
+        }
+      ],
+      "case_choice": "C",
+      "case_result": "案例以一层空间重新分配为重要起点：放弃一部分即时租金，换取企业展示、创业者交往和公众进入。",
+      "source_section": "三（一）楼门打开：黄金铺面让位于交往空间",
+      "when": [],
+      "branch_note": "",
+      "event_type": "案例主线",
+      "special": false,
+      "random_weight": 1.0,
+      "stage_id": 4
+    },
+    {
+      "id": 5,
+      "chapter": "资源组织 · 补课分支",
+      "title": "企业来了但连接不足：先补“资源接口”",
+      "situation": "如果前几轮更强调资产和施工稳健，创新网络可能尚未形成足够密度。此时空间已经更新，但企业未必能自动获得算力、政策、法务、融资和上下游连接。",
+      "fact": "案例描述，初创团队可由运营人员对接算力、政策、法务、融资和上下游企业，产品形成雏形后又可进入展厅和体验场景获得反馈。",
+      "question": "当创新连接偏弱时，你先补哪一块？",
+      "options": [
+        {
+          "id": "A",
+          "label": "继续把重点放在办公出租",
+          "desc": "让企业自行寻找外部资源，运营方专注空间出租。",
+          "delta": {
+            "asset": 5,
+            "innovation": -4,
+            "collaboration": -4,
+            "openness": -3,
+            "public_value": -2
+          },
+          "condition_delta": {
+            "capital_resilience": 5,
+            "tenant_stability": 1,
+            "execution_capacity": 3,
+            "street_capacity": 1,
+            "public_trust": -2,
+            "spillover": -3
+          }
+        },
+        {
+          "id": "B",
+          "label": "建立一站式企业服务接口",
+          "desc": "把政策、算力、法务、融资、展示和上下游连接组织起来。",
+          "delta": {
+            "asset": -2,
+            "innovation": 12,
+            "collaboration": 10,
+            "openness": 5,
+            "public_value": 4
+          },
+          "condition_delta": {
+            "capital_resilience": -4,
+            "tenant_stability": 2,
+            "execution_capacity": -3,
+            "street_capacity": -1,
+            "public_trust": 4,
+            "spillover": 7
+          }
+        },
+        {
+          "id": "C",
+          "label": "主要靠高频活动吸引流量",
+          "desc": "快速增加曝光，但资源是否沉淀为长期合作仍不确定。",
+          "delta": {
+            "asset": 0,
+            "innovation": 7,
+            "collaboration": 3,
+            "openness": 7,
+            "public_value": 2
+          },
+          "condition_delta": {
+            "capital_resilience": -1,
+            "tenant_stability": 0,
+            "execution_capacity": -4,
+            "street_capacity": -6,
+            "public_trust": 2,
+            "spillover": 3
+          }
+        }
+      ],
+      "case_choice": "B",
+      "case_result": "案例中企业服务并不只发生在办公租赁层面，而是通过运营团队持续对接多类创新资源。",
+      "source_section": "三（二）资源相遇：创业者在近校街区形成网络",
+      "when": [
+        {
+          "path": "scores.innovation",
+          "op": "lt",
+          "value": 62
+        }
+      ],
+      "branch_note": "前序选择使“创新活力”尚未形成明显优势，因此进入“资源接口补课”分支。",
+      "event_type": "状态分支",
+      "special": false,
+      "random_weight": 1.0,
+      "stage_id": 5
+    },
+    {
+      "id": 6,
+      "chapter": "资源组织 · 密度分支",
+      "title": "资源越来越密：如何避免“活动很多、连接很浅”？",
+      "situation": "当企业、投资人、科学家和创业者频繁在同一空间相遇后，新的问题从“有没有资源”变成“资源能否真正形成持续连接”。",
+      "fact": "案例中原点学堂持续举办课程、路演、沙龙和 AI Hub 活动，创业者把吸引力概括为投资方、优秀创业团队和科学家的高密度集聚。",
+      "question": "在资源已经较密集的情况下，你会如何组织下一阶段？",
+      "options": [
+        {
+          "id": "A",
+          "label": "继续堆高活动数量",
+          "desc": "用更多活动维持热度和曝光。",
+          "delta": {
+            "asset": 1,
+            "innovation": 6,
+            "collaboration": 1,
+            "openness": 5,
+            "public_value": 1
+          },
+          "condition_delta": {
+            "capital_resilience": -2,
+            "tenant_stability": 0,
+            "execution_capacity": -6,
+            "street_capacity": -6,
+            "public_trust": 0,
+            "spillover": 2
+          }
+        },
+        {
+          "id": "B",
+          "label": "建立“活动—服务—合作”闭环",
+          "desc": "把活动报名、需求识别、资源对接和后续跟踪串成持续服务链。",
+          "delta": {
+            "asset": 2,
+            "innovation": 11,
+            "collaboration": 11,
+            "openness": 5,
+            "public_value": 6
+          },
+          "condition_delta": {
+            "capital_resilience": 0,
+            "tenant_stability": 2,
+            "execution_capacity": -2,
+            "street_capacity": -2,
+            "public_trust": 5,
+            "spillover": 7
+          }
+        },
+        {
+          "id": "C",
+          "label": "转为会员制封闭网络",
+          "desc": "提高服务深度和效率，但降低普通公众与外部团队进入机会。",
+          "delta": {
+            "asset": 6,
+            "innovation": 7,
+            "collaboration": 4,
+            "openness": -10,
+            "public_value": -6
+          },
+          "condition_delta": {
+            "capital_resilience": 5,
+            "tenant_stability": 2,
+            "execution_capacity": 3,
+            "street_capacity": 2,
+            "public_trust": -7,
+            "spillover": -4
+          }
+        }
+      ],
+      "case_choice": "B",
+      "case_result": "案例强调的吸引力来自高密度资源与反复相遇。这里的“闭环”属于基于案例机制设计的情景推演，不是案例中已披露的制度事实。",
+      "source_section": "三（二）资源相遇：创业者在近校街区形成网络",
+      "when": [],
+      "branch_note": "前序选择已形成较高创新活力，本轮从“资源有没有”转向“连接能否沉淀”的进阶问题。",
+      "event_type": "状态分支",
+      "special": false,
+      "random_weight": 1.0,
+      "stage_id": 5
+    },
+    {
+      "id": 7,
+      "chapter": "活力承载 · 压力分支",
+      "title": "日均人流上升：楼内活力开始挤压楼外空间",
+      "situation": "办公、参访、外卖和配送需求叠加后，楼外电动车、共享单车和外卖车辆聚集，人行步道又被绿化带和不同产权地块切断。",
+      "fact": "2026年6月，相关主体联合整治：拆除围墙围栏270米，释放产权内部空间约4700平方米，新增16处非机动车停放区域，规范停车位1080个，并新建或修复871米人行步道。",
+      "question": "当街区承载已经偏紧时，你准备怎么处理？",
+      "options": [
+        {
+          "id": "A",
+          "label": "加强执法与清理",
+          "desc": "快速恢复表面秩序，但不改变空间不足和产权边界割裂。",
+          "delta": {
+            "asset": 1,
+            "innovation": -2,
+            "collaboration": -4,
+            "openness": -2,
+            "public_value": 2
+          },
+          "condition_delta": {
+            "capital_resilience": 1,
+            "tenant_stability": 0,
+            "execution_capacity": 2,
+            "street_capacity": 4,
+            "public_trust": -2,
+            "spillover": 0
+          }
+        },
+        {
+          "id": "B",
+          "label": "跨产权协同打开空间",
+          "desc": "把公共道路、楼前空间和内部退界空间一起纳入步行与停车方案。",
+          "delta": {
+            "asset": -2,
+            "innovation": 5,
+            "collaboration": 13,
+            "openness": 14,
+            "public_value": 13
+          },
+          "condition_delta": {
+            "capital_resilience": -3,
+            "tenant_stability": 1,
+            "execution_capacity": -4,
+            "street_capacity": 15,
+            "public_trust": 10,
+            "spillover": 4
+          }
+        },
+        {
+          "id": "C",
+          "label": "限制访客和活动规模",
+          "desc": "降低短期压力，但削弱街区开放性和资源集聚。",
+          "delta": {
+            "asset": 3,
+            "innovation": -9,
+            "collaboration": -2,
+            "openness": -10,
+            "public_value": -5
+          },
+          "condition_delta": {
+            "capital_resilience": 3,
+            "tenant_stability": 2,
+            "execution_capacity": 4,
+            "street_capacity": 10,
+            "public_trust": -5,
+            "spillover": -4
+          }
+        }
+      ],
+      "case_choice": "B",
+      "case_result": "真实路径从楼内运营转向跨部门、跨产权协同，通过“围墙后退”把部分内部空间转化为可日常使用的城市公共空间。",
+      "source_section": "五（二）围墙后退：产权空间接入城市通行",
+      "when": [
+        {
+          "path": "conditions.street_capacity",
+          "op": "lt",
+          "value": 56
+        },
+        {
+          "path": "scenario.growth",
+          "op": "gte",
+          "value": 3
+        }
+      ],
+      "branch_note": "当前“街区承载”偏低或产业增长较快，因此优先触发公共空间压力事件。",
+      "event_type": "状态分支",
+      "special": false,
+      "random_weight": 1.0,
+      "stage_id": 6
+    },
+    {
+      "id": 8,
+      "chapter": "活力承载 · 运营分支",
+      "title": "一年120余场活动：开放越多越好吗？",
+      "situation": "核心区域日均往来人数由改造前约1200人次增至7000余人次，全年举办沙龙、研讨和路演等活动120余场。活动带来网络效应，也会占用空间和运营能力。",
+      "fact": "案例确认了活动与人流显著增长，但并未给出“最佳活动频率”的统一答案。",
+      "question": "在街区承载尚可时，你如何安排活动与开放节奏？",
+      "options": [
+        {
+          "id": "A",
+          "label": "以专业闭门活动为主",
+          "desc": "集中服务创业与产业网络，提高专业效率。",
+          "delta": {
+            "asset": 4,
+            "innovation": 8,
+            "collaboration": 3,
+            "openness": -7,
+            "public_value": -5
+          },
+          "condition_delta": {
+            "capital_resilience": 3,
+            "tenant_stability": 1,
+            "execution_capacity": 3,
+            "street_capacity": 3,
+            "public_trust": -5,
+            "spillover": -2
+          }
+        },
+        {
+          "id": "B",
+          "label": "专业活动与公众活动错峰并行",
+          "desc": "把高强度产业活动与夜校、市集、体验活动分时组织。",
+          "delta": {
+            "asset": 1,
+            "innovation": 8,
+            "collaboration": 8,
+            "openness": 9,
+            "public_value": 10
+          },
+          "condition_delta": {
+            "capital_resilience": 0,
+            "tenant_stability": 1,
+            "execution_capacity": -4,
+            "street_capacity": -3,
+            "public_trust": 8,
+            "spillover": 5
+          }
+        },
+        {
+          "id": "C",
+          "label": "尽可能增加所有类型活动",
+          "desc": "最大化人气，但运营与公共空间压力快速增加。",
+          "delta": {
+            "asset": 0,
+            "innovation": 7,
+            "collaboration": 3,
+            "openness": 11,
+            "public_value": 4
+          },
+          "condition_delta": {
+            "capital_resilience": -3,
+            "tenant_stability": -1,
+            "execution_capacity": -10,
+            "street_capacity": -12,
+            "public_trust": 2,
+            "spillover": 4
+          }
+        }
+      ],
+      "case_choice": "B",
+      "case_result": "案例同时存在高频专业活动、夜校、市集和体验活动。这里的“错峰并行”是根据案例事实设计的治理推演选项。",
+      "source_section": "三（三）一楼渐满；五（三）学堂开门：专业知识走向社会公众",
+      "when": [],
+      "branch_note": "当前街区承载尚可，本轮不先处理拥堵，而考验“开放强度与运营能力”的平衡。",
+      "event_type": "状态分支",
+      "special": false,
+      "random_weight": 1.0,
+      "stage_id": 6
+    },
+    {
+      "id": 9,
+      "chapter": "公众关系 · 信任分支",
+      "title": "“AI跟我有什么关系？”：居民参与没有自动发生",
+      "situation": "街区向外扩展后，部分周边居民对AI活动感知有限。案例中有老人明确表示对AI不太关注，物业人员也表示居住社区与原点社区分别开展自己的工作。",
+      "fact": "案例显示，居民可以进入部分开放空间，也有人带孩子休闲和体验，但居住社区服务体系、参与渠道与创新街区运营网络仍各自运行。",
+      "question": "如果公众信任和参与偏低，你先做什么？",
+      "options": [
+        {
+          "id": "A",
+          "label": "继续做面向专业人群的品牌活动",
+          "desc": "先把产业影响力做强，等待公众自然关注。",
+          "delta": {
+            "asset": 3,
+            "innovation": 7,
+            "collaboration": -2,
+            "openness": -3,
+            "public_value": -7
+          },
+          "condition_delta": {
+            "capital_resilience": 2,
+            "tenant_stability": 1,
+            "execution_capacity": 2,
+            "street_capacity": 0,
+            "public_trust": -6,
+            "spillover": -2
+          }
+        },
+        {
+          "id": "B",
+          "label": "从生活问题切入设计公众入口",
+          "desc": "用亲子体验、夜校、通行改善和生活服务降低参与门槛。",
+          "delta": {
+            "asset": -1,
+            "innovation": 3,
+            "collaboration": 9,
+            "openness": 12,
+            "public_value": 14
+          },
+          "condition_delta": {
+            "capital_resilience": -2,
+            "tenant_stability": 1,
+            "execution_capacity": -4,
+            "street_capacity": 2,
+            "public_trust": 14,
+            "spillover": 5
+          }
+        },
+        {
+          "id": "C",
+          "label": "发放宣传材料普及AI",
+          "desc": "成本较低，但参与渠道和实际使用场景变化有限。",
+          "delta": {
+            "asset": 1,
+            "innovation": 2,
+            "collaboration": 2,
+            "openness": 3,
+            "public_value": 3
+          },
+          "condition_delta": {
+            "capital_resilience": 1,
+            "tenant_stability": 1,
+            "execution_capacity": 0,
+            "street_capacity": 0,
+            "public_trust": 4,
+            "spillover": 1
+          }
+        }
+      ],
+      "case_choice": "B",
+      "case_result": "案例通过夜校、科技文化市集、体验活动和公开课程，为青年群体、周边居民等普通公众提供进入入口。",
+      "source_section": "四（三）三公里同名；五（三）学堂开门",
+      "when": [
+        {
+          "path": "conditions.public_trust",
+          "op": "lt",
+          "value": 58
+        },
+        {
+          "path": "scenario.openness_demand",
+          "op": "gte",
+          "value": 3
+        }
+      ],
+      "branch_note": "当前公众信任偏低或公共开放诉求较高，因此进入“公众入口”分支。",
+      "event_type": "状态分支",
+      "special": false,
+      "random_weight": 1.0,
+      "stage_id": 7
+    },
+    {
+      "id": 10,
+      "chapter": "公众关系 · 价值排序",
+      "title": "同一片空间：企业、运营方和公众谁优先？",
+      "situation": "同一层空间对运营方、创业者、政府和普通公众意味着不同价值：租金、资源连接、城市功能、空间可进入和日常便利并不天然一致。",
+      "fact": "案例明确呈现了不同主体的价值排序差异，也指出公众进入并不会自动消除这种差异。",
+      "question": "当参与已经形成，你如何决定稀缺空间和活动资源的优先顺序？",
+      "options": [
+        {
+          "id": "A",
+          "label": "企业创新效率优先",
+          "desc": "优先把有限空间给路演、融资和企业服务。",
+          "delta": {
+            "asset": 5,
+            "innovation": 10,
+            "collaboration": 1,
+            "openness": -5,
+            "public_value": -5
+          },
+          "condition_delta": {
+            "capital_resilience": 4,
+            "tenant_stability": 2,
+            "execution_capacity": 3,
+            "street_capacity": 1,
+            "public_trust": -5,
+            "spillover": 0
+          }
+        },
+        {
+          "id": "B",
+          "label": "建立分时、分区、分对象规则",
+          "desc": "明确专业服务与公众开放各自的时段、空间和基本保障。",
+          "delta": {
+            "asset": 2,
+            "innovation": 7,
+            "collaboration": 10,
+            "openness": 9,
+            "public_value": 11
+          },
+          "condition_delta": {
+            "capital_resilience": 1,
+            "tenant_stability": 2,
+            "execution_capacity": -4,
+            "street_capacity": 2,
+            "public_trust": 9,
+            "spillover": 4
+          }
+        },
+        {
+          "id": "C",
+          "label": "公众开放优先",
+          "desc": "尽可能把创新空间转为公共活动空间。",
+          "delta": {
+            "asset": -8,
+            "innovation": -3,
+            "collaboration": 4,
+            "openness": 14,
+            "public_value": 10
+          },
+          "condition_delta": {
+            "capital_resilience": -10,
+            "tenant_stability": -1,
+            "execution_capacity": -5,
+            "street_capacity": -6,
+            "public_trust": 8,
+            "spillover": 2
+          }
+        }
+      ],
+      "case_choice": "B",
+      "case_result": "案例并未给出固定比例；“分时分区”是基于“不同群体需求需要持续协调”这一事实设计的情景方案。",
+      "source_section": "四（一）同一片空间：不同人看见不同价值；五（三）学堂开门",
+      "when": [],
+      "branch_note": "当前公众信任较高，本轮从“如何让公众进入”升级为“进入后如何排序公共价值”。",
+      "event_type": "状态分支",
+      "special": false,
+      "random_weight": 1.0,
+      "stage_id": 7
+    },
+    {
+      "id": 11,
+      "chapter": "协同机制 · 接口分支",
+      "title": "3平方公里、多产权、多部门：谁来当共同接口？",
+      "situation": "街区从核心区域扩展到约3平方公里后，涉及高校园区、其他企业和不同产权单位。单一产权主体无法直接支配整个街区。",
+      "fact": "东升镇推动成立北京原点社区科创生态服务有限公司，承担政策传达、方向协调、活动统筹和资源连接，为分散主体提供共同接口。",
+      "question": "如果协同能力不足，你会先补哪种制度能力？",
+      "options": [
+        {
+          "id": "A",
+          "label": "由政府直接统管全部事项",
+          "desc": "指挥链更集中，但对不同产权主体和专业运营的适配有限。",
+          "delta": {
+            "asset": 0,
+            "innovation": 1,
+            "collaboration": 4,
+            "openness": 1,
+            "public_value": 2
+          },
+          "condition_delta": {
+            "capital_resilience": 0,
+            "tenant_stability": 1,
+            "execution_capacity": 2,
+            "street_capacity": 0,
+            "public_trust": 1,
+            "spillover": 1
+          }
+        },
+        {
+          "id": "B",
+          "label": "建立共同接口 + 分工协商",
+          "desc": "用平台承接政策、活动和资源连接，重大事项统筹，具体事务由相应主体负责。",
+          "delta": {
+            "asset": 2,
+            "innovation": 6,
+            "collaboration": 14,
+            "openness": 7,
+            "public_value": 8
+          },
+          "condition_delta": {
+            "capital_resilience": 1,
+            "tenant_stability": 2,
+            "execution_capacity": 10,
+            "street_capacity": 2,
+            "public_trust": 7,
+            "spillover": 8
+          }
+        },
+        {
+          "id": "C",
+          "label": "让各产权主体各自管理",
+          "desc": "降低协调成本，但街区公共问题容易碎片化。",
+          "delta": {
+            "asset": 4,
+            "innovation": 1,
+            "collaboration": -10,
+            "openness": -6,
+            "public_value": -8
+          },
+          "condition_delta": {
+            "capital_resilience": 4,
+            "tenant_stability": 2,
+            "execution_capacity": -6,
+            "street_capacity": -4,
+            "public_trust": -7,
+            "spillover": -8
+          }
+        }
+      ],
+      "case_choice": "B",
+      "case_result": "案例形成了政府引导、集体经济组织投入、运营机构执行、企业参与和公共部门协同的组织关系。",
+      "source_section": "五（一）平台居中：多元主体有了共同接口",
+      "when": [
+        {
+          "path": "scores.collaboration",
+          "op": "lt",
+          "value": 64
+        },
+        {
+          "path": "conditions.execution_capacity",
+          "op": "lt",
+          "value": 55
+        },
+        {
+          "path": "scenario.coordination_difficulty",
+          "op": "gte",
+          "value": 3
+        }
+      ],
+      "branch_note": "当前协同得分或执行能力不足，因此优先触发“共同接口”制度建设问题。",
+      "event_type": "状态分支",
+      "special": false,
+      "random_weight": 1.0,
+      "stage_id": 8
+    },
+    {
+      "id": 12,
+      "chapter": "协同机制 · 成本分担",
+      "title": "围墙打开之后：维护成本谁来长期承担？",
+      "situation": "跨产权开放能够改善通行，但每扩展一个节点，空间开放、设施维护和成本分担都要重新协商。共同接口并不能直接支配其他产权主体资产。",
+      "fact": "案例明确指出，街区始终受到权属和行政边界约束，每向外扩展一个节点都需要重新协商。",
+      "question": "当协同机制已较成熟时，下一步怎么把协同变成可持续规则？",
+      "options": [
+        {
+          "id": "A",
+          "label": "一次性项目制协调",
+          "desc": "有问题再临时组建项目，完成后解散。",
+          "delta": {
+            "asset": 3,
+            "innovation": 2,
+            "collaboration": 2,
+            "openness": 4,
+            "public_value": 3
+          },
+          "condition_delta": {
+            "capital_resilience": 3,
+            "tenant_stability": 1,
+            "execution_capacity": 1,
+            "street_capacity": 4,
+            "public_trust": 2,
+            "spillover": 2
+          }
+        },
+        {
+          "id": "B",
+          "label": "建立“开放—维护—成本—反馈”协议",
+          "desc": "把开放范围、维护责任、成本承担和公众反馈写成可持续协商规则。",
+          "delta": {
+            "asset": 3,
+            "innovation": 4,
+            "collaboration": 13,
+            "openness": 10,
+            "public_value": 11
+          },
+          "condition_delta": {
+            "capital_resilience": 2,
+            "tenant_stability": 2,
+            "execution_capacity": 8,
+            "street_capacity": 8,
+            "public_trust": 9,
+            "spillover": 6
+          }
+        },
+        {
+          "id": "C",
+          "label": "由核心运营方统一买单",
+          "desc": "推进速度快，但成本与权责长期失衡。",
+          "delta": {
+            "asset": -8,
+            "innovation": 4,
+            "collaboration": 2,
+            "openness": 8,
+            "public_value": 6
+          },
+          "condition_delta": {
+            "capital_resilience": -12,
+            "tenant_stability": 1,
+            "execution_capacity": 3,
+            "street_capacity": 6,
+            "public_trust": 5,
+            "spillover": 3
+          }
+        }
+      ],
+      "case_choice": "B",
+      "case_result": "案例没有披露一套固定成本协议；本选项是基于“开放、维护和成本需要反复协商”的案例事实设计的制度推演。",
+      "source_section": "五（一）平台居中；五（二）围墙后退",
+      "when": [],
+      "branch_note": "当前协同能力较强，本轮不再解决“有没有接口”，而转向“怎样把协同制度化”。",
+      "event_type": "状态分支",
+      "special": false,
+      "random_weight": 1.0,
+      "stage_id": 8
+    },
+    {
+      "id": 13,
+      "chapter": "资源扩散 · 薄弱分支",
+      "title": "核心很强，外围感知很弱：资源如何真正外溢？",
+      "situation": "街区范围扩大后，资源并未随名称同步均匀分布。案例中的创业团队成员观察到，资源和投入仍主要集中在原点大厦核心区域。",
+      "fact": "案例指出核心之外的园区、街区和居住社区尚缺少稳定的资源传递渠道。",
+      "question": "如果资源外溢仍偏弱，你会怎么做？",
+      "options": [
+        {
+          "id": "A",
+          "label": "继续做强核心，等待自然扩散",
+          "desc": "维持核心效率，但外围获得感改善较慢。",
+          "delta": {
+            "asset": 5,
+            "innovation": 7,
+            "collaboration": -1,
+            "openness": -5,
+            "public_value": -7
+          },
+          "condition_delta": {
+            "capital_resilience": 4,
+            "tenant_stability": 1,
+            "execution_capacity": 3,
+            "street_capacity": 0,
+            "public_trust": -4,
+            "spillover": -5
+          }
+        },
+        {
+          "id": "B",
+          "label": "建立节点化资源传递机制",
+          "desc": "把课程、活动、企业服务和展示机会按不同节点需求向外输送。",
+          "delta": {
+            "asset": 0,
+            "innovation": 8,
+            "collaboration": 12,
+            "openness": 10,
+            "public_value": 13
+          },
+          "condition_delta": {
+            "capital_resilience": -2,
+            "tenant_stability": 1,
+            "execution_capacity": -5,
+            "street_capacity": -1,
+            "public_trust": 9,
+            "spillover": 15
+          }
+        },
+        {
+          "id": "C",
+          "label": "平均复制核心区配置",
+          "desc": "追求形式均衡，但忽略人群、产权和使用需求差异。",
+          "delta": {
+            "asset": -8,
+            "innovation": 2,
+            "collaboration": -2,
+            "openness": 3,
+            "public_value": 0
+          },
+          "condition_delta": {
+            "capital_resilience": -10,
+            "tenant_stability": 0,
+            "execution_capacity": -10,
+            "street_capacity": -5,
+            "public_trust": -1,
+            "spillover": 5
+          }
+        }
+      ],
+      "case_choice": "B",
+      "case_result": "案例后续通过原点学堂、公开活动以及向周边节点延伸等方式推进资源连接，但也明确指出外围资源传递仍是持续问题。",
+      "source_section": "四（三）三公里同名；五（三）学堂开门；五（四）一核连带",
+      "when": [
+        {
+          "path": "conditions.spillover",
+          "op": "lt",
+          "value": 60
+        }
+      ],
+      "branch_note": "当前“资源外溢”仍偏弱，因此进入“如何让外围真正获得资源”的分支。",
+      "event_type": "状态分支",
+      "special": false,
+      "random_weight": 1.0,
+      "stage_id": 9
+    },
+    {
+      "id": 14,
+      "chapter": "资源扩散 · 进阶分支",
+      "title": "资源已经走出去：不同节点还要复制同一种原点吗？",
+      "situation": "当创新资源开始沿周边节点扩散后，新问题变成：不同园区、街区和居住社区的人群需求、产权条件和空间基础并不相同。",
+      "fact": "案例明确指出，扩散的不是一套固定建筑方案，而是使高校、园区、街区和公共文化空间发生连接的组织方式。",
+      "question": "你会怎样设计下一阶段的节点扩散？",
+      "options": [
+        {
+          "id": "A",
+          "label": "统一复制核心区标准模板",
+          "desc": "品牌统一、落地快，但可能与不同节点需求错位。",
+          "delta": {
+            "asset": -3,
+            "innovation": 5,
+            "collaboration": 1,
+            "openness": 4,
+            "public_value": 0
+          },
+          "condition_delta": {
+            "capital_resilience": -4,
+            "tenant_stability": 0,
+            "execution_capacity": -4,
+            "street_capacity": -2,
+            "public_trust": -2,
+            "spillover": 6
+          }
+        },
+        {
+          "id": "B",
+          "label": "统一原则 + 节点差异化方案",
+          "desc": "保留资源连接、公共开放和协同治理原则，同时允许每个节点按人群与产权条件调整。",
+          "delta": {
+            "asset": 3,
+            "innovation": 8,
+            "collaboration": 12,
+            "openness": 10,
+            "public_value": 12
+          },
+          "condition_delta": {
+            "capital_resilience": 2,
+            "tenant_stability": 1,
+            "execution_capacity": 5,
+            "street_capacity": 3,
+            "public_trust": 9,
+            "spillover": 12
+          }
+        },
+        {
+          "id": "C",
+          "label": "完全交给各节点自行发展",
+          "desc": "适应性高，但跨节点网络和共同品牌容易松散。",
+          "delta": {
+            "asset": 4,
+            "innovation": 3,
+            "collaboration": -8,
+            "openness": 2,
+            "public_value": 1
+          },
+          "condition_delta": {
+            "capital_resilience": 3,
+            "tenant_stability": 1,
+            "execution_capacity": 2,
+            "street_capacity": 1,
+            "public_trust": 1,
+            "spillover": -3
+          }
+        }
+      ],
+      "case_choice": "B",
+      "case_result": "案例强调不同节点要识别不同群体需要的价值，不能简单复制核心区资源配置。",
+      "source_section": "五（四）一核连带：创新资源沿“两区一带”延展",
+      "when": [],
+      "branch_note": "当前资源外溢已经较强，本轮从“能不能外溢”升级为“怎样差异化扩散”。",
+      "event_type": "状态分支",
+      "special": false,
+      "random_weight": 1.0,
+      "stage_id": 9
+    },
+    {
+      "id": 15,
+      "chapter": "由点及面",
+      "title": "从“原点社区”到“两区一带”：复制什么，保留什么？",
+      "situation": "海淀区“十五五”规划将北京AI原点社区、中关村AI北纬社区和百年京张AI创新带共同纳入“两区一带”人工智能创新生态圈。",
+      "fact": "案例认为，原点社区的示范意义并不在于机械复制建筑和业态，而在于存量空间更新、公共空间开放、多产权协商、公众活动组织等连接方式能否适配新的场域。",
+      "question": "作为最后一轮，你会把哪种能力定义为最值得复制的“原点机制”？",
+      "options": [
+        {
+          "id": "A",
+          "label": "复制空间形态和品牌视觉",
+          "desc": "最容易被看见，也最容易标准化。",
+          "delta": {
+            "asset": 1,
+            "innovation": 3,
+            "collaboration": -2,
+            "openness": 2,
+            "public_value": 0
+          },
+          "condition_delta": {
+            "capital_resilience": 0,
+            "tenant_stability": 0,
+            "execution_capacity": 1,
+            "street_capacity": 0,
+            "public_trust": 0,
+            "spillover": 2
+          }
+        },
+        {
+          "id": "B",
+          "label": "复制“发现问题—协商价值—渐进实施—反馈调整”的治理机制",
+          "desc": "把组织方式作为核心能力，再由不同节点形成各自方案。",
+          "delta": {
+            "asset": 5,
+            "innovation": 8,
+            "collaboration": 14,
+            "openness": 10,
+            "public_value": 14
+          },
+          "condition_delta": {
+            "capital_resilience": 3,
+            "tenant_stability": 3,
+            "execution_capacity": 10,
+            "street_capacity": 5,
+            "public_trust": 10,
+            "spillover": 10
+          }
+        },
+        {
+          "id": "C",
+          "label": "只复制产业招商政策",
+          "desc": "集中扩大AI企业数量，其他公共空间和公众参与交给后续处理。",
+          "delta": {
+            "asset": 6,
+            "innovation": 10,
+            "collaboration": -5,
+            "openness": -7,
+            "public_value": -8
+          },
+          "condition_delta": {
+            "capital_resilience": 4,
+            "tenant_stability": 0,
+            "execution_capacity": 3,
+            "street_capacity": -5,
+            "public_trust": -7,
+            "spillover": 4
+          }
+        }
+      ],
+      "case_choice": "B",
+      "case_result": "案例最后把问题推进到“多元主体如何共同形成治理场域、公共价值如何转化为可共享可持续成果”。把治理机制作为可复制对象，是对案例结论的直接提炼。",
+      "source_section": "六、展望：由点及面，治理再启",
+      "when": [],
+      "branch_note": "",
+      "event_type": "案例主线",
+      "special": false,
+      "random_weight": 1.0,
+      "stage_id": 10
+    },
+    {
+      "id": 16,
+      "chapter": "随机事件 · 方向选择",
+      "title": "高校合作窗口突然打开：联合实验空间要不要现在接？",
+      "situation": "一所高校团队提出共建短期联合实验与成果展示空间，但需要你在两周内拿出一层部分面积并承担基础改造。",
+      "fact": "本卡为基于案例已识别矛盾设计的情景推演，不代表AI原点社区真实发生过该事件。",
+      "question": "面对突然出现的高校合作窗口，你怎么决策？",
+      "options": [
+        {
+          "id": "A",
+          "label": "先拒绝，维持既定招商",
+          "desc": "避免临时改变空间计划，等商业模型更稳定后再谈合作。",
+          "delta": {
+            "asset": 7,
+            "innovation": -5,
+            "collaboration": -3,
+            "openness": -3,
+            "public_value": -4
+          },
+          "condition_delta": {
+            "capital_resilience": 7,
+            "tenant_stability": 3,
+            "execution_capacity": 3,
+            "street_capacity": 2,
+            "public_trust": -4,
+            "spillover": -3
+          }
+        },
+        {
+          "id": "B",
+          "label": "小面积试点 + 设退出节点",
+          "desc": "先划出可逆的小空间测试科研合作，三个月后复盘。",
+          "delta": {
+            "asset": 2,
+            "innovation": 6,
+            "collaboration": 8,
+            "openness": 6,
+            "public_value": 7
+          },
+          "condition_delta": {
+            "capital_resilience": 0,
+            "tenant_stability": 2,
+            "execution_capacity": 1,
+            "street_capacity": 2,
+            "public_trust": 6,
+            "spillover": 5
+          }
+        },
+        {
+          "id": "C",
+          "label": "大幅调整空间，抢占合作窗口",
+          "desc": "迅速把高校合作作为品牌锚点，优先投入空间和运营资源。",
+          "delta": {
+            "asset": -4,
+            "innovation": 11,
+            "collaboration": 3,
+            "openness": 5,
+            "public_value": 2
+          },
+          "condition_delta": {
+            "capital_resilience": -8,
+            "tenant_stability": -3,
+            "execution_capacity": -7,
+            "street_capacity": -6,
+            "public_trust": 1,
+            "spillover": 6
+          }
+        }
+      ],
+      "case_choice": null,
+      "case_result": "情景卡没有唯一“案例正确答案”。系统将结合你的选择、当前状态和五方协商继续推演。",
+      "source_section": "情景推演卡｜非案例事实",
+      "when": [],
+      "branch_note": "",
+      "event_type": "随机情景",
+      "special": true,
+      "random_weight": 1.3,
+      "stage_id": 1
+    },
+    {
+      "id": 17,
+      "chapter": "随机事件 · 方向选择",
+      "title": "AI行业短期降温：还要坚持原来的产业定位吗？",
+      "situation": "外部融资环境转弱，部分AI企业开始收缩招聘，团队内部出现“是不是押错赛道”的争论。",
+      "fact": "本卡为基于案例已识别矛盾设计的情景推演，不代表AI原点社区真实发生过该事件。",
+      "question": "你会如何处理产业方向的不确定性？",
+      "options": [
+        {
+          "id": "A",
+          "label": "暂时回归稳租金业态",
+          "desc": "降低AI产业投入，把主要空间重新交给更稳健的普通租赁。",
+          "delta": {
+            "asset": 7,
+            "innovation": -5,
+            "collaboration": -3,
+            "openness": -3,
+            "public_value": -4
+          },
+          "condition_delta": {
+            "capital_resilience": 7,
+            "tenant_stability": 3,
+            "execution_capacity": 3,
+            "street_capacity": 2,
+            "public_trust": -4,
+            "spillover": -3
+          }
+        },
+        {
+          "id": "B",
+          "label": "保留主线，但把投入改为分阶段",
+          "desc": "维持AI方向，同时设置招商、活动和资源连接的阶段阈值。",
+          "delta": {
+            "asset": 2,
+            "innovation": 6,
+            "collaboration": 8,
+            "openness": 6,
+            "public_value": 7
+          },
+          "condition_delta": {
+            "capital_resilience": 0,
+            "tenant_stability": 2,
+            "execution_capacity": 1,
+            "street_capacity": 2,
+            "public_trust": 6,
+            "spillover": 5
+          }
+        },
+        {
+          "id": "C",
+          "label": "逆周期加码AI集聚",
+          "desc": "趁行业低谷扩大优惠和投入，希望抢先形成资源密度。",
+          "delta": {
+            "asset": -4,
+            "innovation": 11,
+            "collaboration": 3,
+            "openness": 5,
+            "public_value": 2
+          },
+          "condition_delta": {
+            "capital_resilience": -8,
+            "tenant_stability": -3,
+            "execution_capacity": -7,
+            "street_capacity": -6,
+            "public_trust": 1,
+            "spillover": 6
+          }
+        }
+      ],
+      "case_choice": null,
+      "case_result": "情景卡没有唯一“案例正确答案”。系统将结合你的选择、当前状态和五方协商继续推演。",
+      "source_section": "情景推演卡｜非案例事实",
+      "when": [
+        {
+          "path": "scenario.capital_pressure",
+          "op": "gte",
+          "value": 2
+        }
+      ],
+      "branch_note": "融资与市场不确定性上升，触发“逆周期定位”情景。",
+      "event_type": "随机情景",
+      "special": true,
+      "random_weight": 1.1,
+      "stage_id": 1
+    },
+    {
+      "id": 18,
+      "chapter": "随机事件 · 方向选择",
+      "title": "夜间客流突然增加：一层要先补生活服务还是科技展示？",
+      "situation": "周边夜间人流明显增加，餐饮、便利服务和科技体验都提出了空间需求，三类用途会争夺有限的一层位置。",
+      "fact": "本卡为基于案例已识别矛盾设计的情景推演，不代表AI原点社区真实发生过该事件。",
+      "question": "新增空间优先给谁？",
+      "options": [
+        {
+          "id": "A",
+          "label": "优先生活商业",
+          "desc": "先补餐饮、便利和日常消费，提高稳定客流和租金。",
+          "delta": {
+            "asset": 7,
+            "innovation": -5,
+            "collaboration": -3,
+            "openness": 4,
+            "public_value": 3
+          },
+          "condition_delta": {
+            "capital_resilience": 7,
+            "tenant_stability": 3,
+            "execution_capacity": 3,
+            "street_capacity": 2,
+            "public_trust": -4,
+            "spillover": -3
+          }
+        },
+        {
+          "id": "B",
+          "label": "生活服务与科技体验混合",
+          "desc": "用分区和错峰方式让生活服务、展示体验共同存在。",
+          "delta": {
+            "asset": 2,
+            "innovation": 6,
+            "collaboration": 8,
+            "openness": 6,
+            "public_value": 7
+          },
+          "condition_delta": {
+            "capital_resilience": 0,
+            "tenant_stability": 2,
+            "execution_capacity": 1,
+            "street_capacity": 2,
+            "public_trust": 6,
+            "spillover": 5
+          }
+        },
+        {
+          "id": "C",
+          "label": "优先科技展示和路演",
+          "desc": "把稀缺一层空间继续集中给产业展示和创新活动。",
+          "delta": {
+            "asset": -4,
+            "innovation": 11,
+            "collaboration": 3,
+            "openness": 2,
+            "public_value": 0
+          },
+          "condition_delta": {
+            "capital_resilience": -8,
+            "tenant_stability": -3,
+            "execution_capacity": -7,
+            "street_capacity": -6,
+            "public_trust": 1,
+            "spillover": 6
+          }
+        }
+      ],
+      "case_choice": null,
+      "case_result": "情景卡没有唯一“案例正确答案”。系统将结合你的选择、当前状态和五方协商继续推演。",
+      "source_section": "情景推演卡｜非案例事实",
+      "when": [],
+      "branch_note": "",
+      "event_type": "随机情景",
+      "special": true,
+      "random_weight": 1.0,
+      "stage_id": 1
+    },
+    {
+      "id": 19,
+      "chapter": "随机事件 · 方向选择",
+      "title": "审计关注低效资产：转型投入如何被解释？",
+      "situation": "一次内部资产绩效审查要求说明：为什么要放弃部分即时租金，并为共享空间投入资金。",
+      "fact": "本卡为基于案例已识别矛盾设计的情景推演，不代表AI原点社区真实发生过该事件。",
+      "question": "你会用什么方式回应并继续推进？",
+      "options": [
+        {
+          "id": "A",
+          "label": "收缩公共空间以改善短期账面收益",
+          "desc": "优先让财务指标更快好看，减少低直接收益空间。",
+          "delta": {
+            "asset": 7,
+            "innovation": -5,
+            "collaboration": -3,
+            "openness": -3,
+            "public_value": -4
+          },
+          "condition_delta": {
+            "capital_resilience": 7,
+            "tenant_stability": 3,
+            "execution_capacity": 3,
+            "street_capacity": 2,
+            "public_trust": -4,
+            "spillover": -3
+          }
+        },
+        {
+          "id": "B",
+          "label": "建立“资产收益 + 创新服务 + 公共价值”三本账",
+          "desc": "把财务、产业连接和公共使用分别设定可核查指标。",
+          "delta": {
+            "asset": 2,
+            "innovation": 6,
+            "collaboration": 10,
+            "openness": 6,
+            "public_value": 10
+          },
+          "condition_delta": {
+            "capital_resilience": 0,
+            "tenant_stability": 2,
+            "execution_capacity": -2,
+            "street_capacity": 2,
+            "public_trust": 8,
+            "spillover": 5
+          }
+        },
+        {
+          "id": "C",
+          "label": "以长期愿景为由继续投入，不设阶段指标",
+          "desc": "相信长期价值会出现，不给当前项目设硬性边界。",
+          "delta": {
+            "asset": -4,
+            "innovation": 11,
+            "collaboration": -2,
+            "openness": 5,
+            "public_value": 2
+          },
+          "condition_delta": {
+            "capital_resilience": -8,
+            "tenant_stability": -3,
+            "execution_capacity": -7,
+            "street_capacity": -6,
+            "public_trust": -3,
+            "spillover": 6
+          }
+        }
+      ],
+      "case_choice": null,
+      "case_result": "情景卡没有唯一“案例正确答案”。系统将结合你的选择、当前状态和五方协商继续推演。",
+      "source_section": "情景推演卡｜非案例事实",
+      "when": [],
+      "branch_note": "",
+      "event_type": "随机情景",
+      "special": true,
+      "random_weight": 0.9,
+      "stage_id": 1
+    },
+    {
+      "id": 20,
+      "chapter": "随机事件 · 风险组织",
+      "title": "融资成本突然上升：原改造预算开始吃紧",
+      "situation": "贷款成本上升、装修报价波动，原先能覆盖的改造范围变得紧张。",
+      "fact": "本卡为基于案例已识别矛盾设计的情景推演，不代表AI原点社区真实发生过该事件。",
+      "question": "资金边界被压缩时，你优先怎么做？",
+      "options": [
+        {
+          "id": "A",
+          "label": "缩小改造范围，保现金流",
+          "desc": "优先守住财务安全，推迟非必要空间。",
+          "delta": {
+            "asset": 7,
+            "innovation": -5,
+            "collaboration": -3,
+            "openness": -3,
+            "public_value": -4
+          },
+          "condition_delta": {
+            "capital_resilience": 7,
+            "tenant_stability": 3,
+            "execution_capacity": 3,
+            "street_capacity": 2,
+            "public_trust": -4,
+            "spillover": -3
+          }
+        },
+        {
+          "id": "B",
+          "label": "分期改造 + 重排优先级",
+          "desc": "保留核心公共与创新功能，把非关键工程放到后续。",
+          "delta": {
+            "asset": 2,
+            "innovation": 6,
+            "collaboration": 8,
+            "openness": 6,
+            "public_value": 7
+          },
+          "condition_delta": {
+            "capital_resilience": 0,
+            "tenant_stability": 2,
+            "execution_capacity": 1,
+            "street_capacity": 2,
+            "public_trust": 6,
+            "spillover": 5
+          }
+        },
+        {
+          "id": "C",
+          "label": "维持原计划并追加融资",
+          "desc": "不削减目标，通过更多融资保持一次性推进。",
+          "delta": {
+            "asset": -4,
+            "innovation": 11,
+            "collaboration": 3,
+            "openness": 5,
+            "public_value": 2
+          },
+          "condition_delta": {
+            "capital_resilience": -8,
+            "tenant_stability": -3,
+            "execution_capacity": -7,
+            "street_capacity": -6,
+            "public_trust": 1,
+            "spillover": 6
+          }
+        }
+      ],
+      "case_choice": null,
+      "case_result": "情景卡没有唯一“案例正确答案”。系统将结合你的选择、当前状态和五方协商继续推演。",
+      "source_section": "情景推演卡｜非案例事实",
+      "when": [
+        {
+          "path": "conditions.capital_resilience",
+          "op": "lt",
+          "value": 62
+        }
+      ],
+      "branch_note": "资金韧性偏低，触发融资压力卡。",
+      "event_type": "随机情景",
+      "special": true,
+      "random_weight": 1.4,
+      "stage_id": 2
+    },
+    {
+      "id": 21,
+      "chapter": "随机事件 · 风险组织",
+      "title": "一家龙头企业提出“冠名 + 包租”，但要求强控制权",
+      "situation": "企业愿意承担较高租金和部分改造费用，但希望长期锁定核心空间，并主导品牌展示和活动议程。",
+      "fact": "本卡为基于案例已识别矛盾设计的情景推演，不代表AI原点社区真实发生过该事件。",
+      "question": "这份看起来很划算的合作怎么处理？",
+      "options": [
+        {
+          "id": "A",
+          "label": "接受包租和主导权",
+          "desc": "用确定性收入换取较低资金风险。",
+          "delta": {
+            "asset": 7,
+            "innovation": 3,
+            "collaboration": -3,
+            "openness": -9,
+            "public_value": -7
+          },
+          "condition_delta": {
+            "capital_resilience": 7,
+            "tenant_stability": 3,
+            "execution_capacity": 3,
+            "street_capacity": 2,
+            "public_trust": -4,
+            "spillover": -3
+          }
+        },
+        {
+          "id": "B",
+          "label": "接受资金，但设置公共空间和治理边界",
+          "desc": "允许企业成为锚点，同时保留开放空间、活动比例和退出条款。",
+          "delta": {
+            "asset": 4,
+            "innovation": 5,
+            "collaboration": 12,
+            "openness": 5,
+            "public_value": 7
+          },
+          "condition_delta": {
+            "capital_resilience": 5,
+            "tenant_stability": 2,
+            "execution_capacity": 8,
+            "street_capacity": 3,
+            "public_trust": 7,
+            "spillover": 7
+          }
+        },
+        {
+          "id": "C",
+          "label": "拒绝合作，坚持完全自主运营",
+          "desc": "保留全部治理权，但自行承担资金和招商风险。",
+          "delta": {
+            "asset": -4,
+            "innovation": 11,
+            "collaboration": 2,
+            "openness": 5,
+            "public_value": 2
+          },
+          "condition_delta": {
+            "capital_resilience": -8,
+            "tenant_stability": -3,
+            "execution_capacity": -7,
+            "street_capacity": -6,
+            "public_trust": 1,
+            "spillover": 6
+          }
+        }
+      ],
+      "case_choice": null,
+      "case_result": "情景卡没有唯一“案例正确答案”。系统将结合你的选择、当前状态和五方协商继续推演。",
+      "source_section": "情景推演卡｜非案例事实",
+      "when": [],
+      "branch_note": "",
+      "event_type": "随机情景",
+      "special": true,
+      "random_weight": 1.0,
+      "stage_id": 2
+    },
+    {
+      "id": 22,
+      "chapter": "随机事件 · 风险组织",
+      "title": "专项资金窗口只有30天：要不要为了申报改变节奏？",
+      "situation": "一个外部支持项目要求在30天内提交方案和配套材料，但会明显占用运营团队当前的改造精力。",
+      "fact": "本卡为基于案例已识别矛盾设计的情景推演，不代表AI原点社区真实发生过该事件。",
+      "question": "如何利用短暂政策窗口？",
+      "options": [
+        {
+          "id": "A",
+          "label": "放弃申报，按原节奏推进",
+          "desc": "避免为了资金窗口打乱已有执行计划。",
+          "delta": {
+            "asset": 7,
+            "innovation": -5,
+            "collaboration": -3,
+            "openness": -3,
+            "public_value": -4
+          },
+          "condition_delta": {
+            "capital_resilience": 7,
+            "tenant_stability": 3,
+            "execution_capacity": 3,
+            "street_capacity": 2,
+            "public_trust": -4,
+            "spillover": -3
+          }
+        },
+        {
+          "id": "B",
+          "label": "成立临时专班，申报与建设并行",
+          "desc": "把申报范围限定在最相关模块，并设专人负责。",
+          "delta": {
+            "asset": 4,
+            "innovation": 5,
+            "collaboration": 12,
+            "openness": 5,
+            "public_value": 7
+          },
+          "condition_delta": {
+            "capital_resilience": 5,
+            "tenant_stability": 2,
+            "execution_capacity": 8,
+            "street_capacity": 3,
+            "public_trust": 7,
+            "spillover": 7
+          }
+        },
+        {
+          "id": "C",
+          "label": "暂停现有工作，全力追专项资金",
+          "desc": "把短期资源集中到申报，希望拿到更大外部支持。",
+          "delta": {
+            "asset": -4,
+            "innovation": 11,
+            "collaboration": 4,
+            "openness": 5,
+            "public_value": 2
+          },
+          "condition_delta": {
+            "capital_resilience": -8,
+            "tenant_stability": -3,
+            "execution_capacity": -10,
+            "street_capacity": -6,
+            "public_trust": 1,
+            "spillover": 6
+          }
+        }
+      ],
+      "case_choice": null,
+      "case_result": "情景卡没有唯一“案例正确答案”。系统将结合你的选择、当前状态和五方协商继续推演。",
+      "source_section": "情景推演卡｜非案例事实",
+      "when": [],
+      "branch_note": "",
+      "event_type": "随机情景",
+      "special": true,
+      "random_weight": 1.1,
+      "stage_id": 2
+    },
+    {
+      "id": 23,
+      "chapter": "随机事件 · 风险组织",
+      "title": "集体股东出现分歧：有人要稳收益，有人要抢窗口",
+      "situation": "资产主体内部对回报期的容忍度不同，若无法形成共同边界，后续每笔投入都可能重新争论。",
+      "fact": "本卡为基于案例已识别矛盾设计的情景推演，不代表AI原点社区真实发生过该事件。",
+      "question": "你如何组织内部风险共识？",
+      "options": [
+        {
+          "id": "A",
+          "label": "按最保守意见收缩",
+          "desc": "以避免内部冲突为优先，减少高不确定投入。",
+          "delta": {
+            "asset": 7,
+            "innovation": -5,
+            "collaboration": -3,
+            "openness": -3,
+            "public_value": -4
+          },
+          "condition_delta": {
+            "capital_resilience": 7,
+            "tenant_stability": 3,
+            "execution_capacity": 3,
+            "street_capacity": 2,
+            "public_trust": -4,
+            "spillover": -3
+          }
+        },
+        {
+          "id": "B",
+          "label": "设风险预算 + 分阶段授权",
+          "desc": "事先约定可承受损失、复盘节点和追加投入条件。",
+          "delta": {
+            "asset": 4,
+            "innovation": 5,
+            "collaboration": 12,
+            "openness": 5,
+            "public_value": 7
+          },
+          "condition_delta": {
+            "capital_resilience": 5,
+            "tenant_stability": 2,
+            "execution_capacity": 8,
+            "street_capacity": 3,
+            "public_trust": 7,
+            "spillover": 7
+          }
+        },
+        {
+          "id": "C",
+          "label": "由少数核心负责人快速决策",
+          "desc": "提高速度，但弱化内部协商程序。",
+          "delta": {
+            "asset": -4,
+            "innovation": 11,
+            "collaboration": -5,
+            "openness": 5,
+            "public_value": 2
+          },
+          "condition_delta": {
+            "capital_resilience": -8,
+            "tenant_stability": -3,
+            "execution_capacity": -7,
+            "street_capacity": -6,
+            "public_trust": -2,
+            "spillover": 6
+          }
+        }
+      ],
+      "case_choice": null,
+      "case_result": "情景卡没有唯一“案例正确答案”。系统将结合你的选择、当前状态和五方协商继续推演。",
+      "source_section": "情景推演卡｜非案例事实",
+      "when": [],
+      "branch_note": "",
+      "event_type": "随机情景",
+      "special": true,
+      "random_weight": 0.9,
+      "stage_id": 2
+    },
+    {
+      "id": 24,
+      "chapter": "随机事件 · 渐进更新",
+      "title": "关键租户拒绝提前调整：施工动线被卡住",
+      "situation": "一个面积较大的存量租户不愿改变租约和通行安排，直接影响下一阶段施工。",
+      "fact": "本卡为基于案例已识别矛盾设计的情景推演，不代表AI原点社区真实发生过该事件。",
+      "question": "你会怎样处理？",
+      "options": [
+        {
+          "id": "A",
+          "label": "强硬终止并补偿",
+          "desc": "用更高成本换取施工速度。",
+          "delta": {
+            "asset": 3,
+            "innovation": -3,
+            "collaboration": -7,
+            "openness": -7,
+            "public_value": -8
+          },
+          "condition_delta": {
+            "capital_resilience": 4,
+            "tenant_stability": -12,
+            "execution_capacity": 6,
+            "street_capacity": 7,
+            "public_trust": -6,
+            "spillover": -4
+          }
+        },
+        {
+          "id": "B",
+          "label": "重新排施工序 + 协商过渡",
+          "desc": "让工程绕开关键区域，并给租户明确过渡节点。",
+          "delta": {
+            "asset": 2,
+            "innovation": 6,
+            "collaboration": 11,
+            "openness": 6,
+            "public_value": 7
+          },
+          "condition_delta": {
+            "capital_resilience": 0,
+            "tenant_stability": 10,
+            "execution_capacity": -3,
+            "street_capacity": 2,
+            "public_trust": 6,
+            "spillover": 5
+          }
+        },
+        {
+          "id": "C",
+          "label": "整体延期等待租约结束",
+          "desc": "优先维持租户稳定，牺牲改造节奏。",
+          "delta": {
+            "asset": 7,
+            "innovation": -8,
+            "collaboration": -3,
+            "openness": -3,
+            "public_value": -4
+          },
+          "condition_delta": {
+            "capital_resilience": 7,
+            "tenant_stability": 8,
+            "execution_capacity": -6,
+            "street_capacity": 2,
+            "public_trust": -4,
+            "spillover": -3
+          }
+        }
+      ],
+      "case_choice": null,
+      "case_result": "情景卡没有唯一“案例正确答案”。系统将结合你的选择、当前状态和五方协商继续推演。",
+      "source_section": "情景推演卡｜非案例事实",
+      "when": [
+        {
+          "path": "conditions.tenant_stability",
+          "op": "lt",
+          "value": 63
+        }
+      ],
+      "branch_note": "租户稳定度偏低，触发“关键租户阻滞”卡。",
+      "event_type": "随机情景",
+      "special": true,
+      "random_weight": 1.4,
+      "stage_id": 3
+    },
+    {
+      "id": 25,
+      "chapter": "随机事件 · 渐进更新",
+      "title": "消防与安全要求升级：边营边改更难了",
+      "situation": "安全检查提出更严格的人流分隔和施工隔离要求，原有边营边改方案需要重排。",
+      "fact": "本卡为基于案例已识别矛盾设计的情景推演，不代表AI原点社区真实发生过该事件。",
+      "question": "如何在安全与连续经营之间重新平衡？",
+      "options": [
+        {
+          "id": "A",
+          "label": "暂停营业集中施工",
+          "desc": "以安全和效率为主，短期承受经营中断。",
+          "delta": {
+            "asset": -2,
+            "innovation": -3,
+            "collaboration": 1,
+            "openness": -7,
+            "public_value": 2
+          },
+          "condition_delta": {
+            "capital_resilience": 4,
+            "tenant_stability": -8,
+            "execution_capacity": 5,
+            "street_capacity": 7,
+            "public_trust": -6,
+            "spillover": -4
+          }
+        },
+        {
+          "id": "B",
+          "label": "降低施工强度，增加隔离与预约",
+          "desc": "延长工期，但保持大部分租户连续经营。",
+          "delta": {
+            "asset": 0,
+            "innovation": 3,
+            "collaboration": 9,
+            "openness": 8,
+            "public_value": 10
+          },
+          "condition_delta": {
+            "capital_resilience": -2,
+            "tenant_stability": 2,
+            "execution_capacity": 5,
+            "street_capacity": 12,
+            "public_trust": 8,
+            "spillover": 4
+          }
+        },
+        {
+          "id": "C",
+          "label": "尽量维持原计划",
+          "desc": "只做最低限度调整，争取不拖延节点。",
+          "delta": {
+            "asset": -4,
+            "innovation": 11,
+            "collaboration": 3,
+            "openness": 5,
+            "public_value": -7
+          },
+          "condition_delta": {
+            "capital_resilience": -8,
+            "tenant_stability": -3,
+            "execution_capacity": -8,
+            "street_capacity": -6,
+            "public_trust": -8,
+            "spillover": 6
+          }
+        }
+      ],
+      "case_choice": null,
+      "case_result": "情景卡没有唯一“案例正确答案”。系统将结合你的选择、当前状态和五方协商继续推演。",
+      "source_section": "情景推演卡｜非案例事实",
+      "when": [],
+      "branch_note": "",
+      "event_type": "随机情景",
+      "special": true,
+      "random_weight": 1.0,
+      "stage_id": 3
+    },
+    {
+      "id": 26,
+      "chapter": "随机事件 · 渐进更新",
+      "title": "装修材料价格上涨20%：哪些空间先不做？",
+      "situation": "成本波动迫使团队重新排序“必须完成”和“可以等待”的空间。",
+      "fact": "本卡为基于案例已识别矛盾设计的情景推演，不代表AI原点社区真实发生过该事件。",
+      "question": "预算突然超支时，你会先保什么？",
+      "options": [
+        {
+          "id": "A",
+          "label": "先保可出租办公区",
+          "desc": "保证尽快形成租金，公共和展示空间后置。",
+          "delta": {
+            "asset": 7,
+            "innovation": -5,
+            "collaboration": -3,
+            "openness": -3,
+            "public_value": -4
+          },
+          "condition_delta": {
+            "capital_resilience": 7,
+            "tenant_stability": 3,
+            "execution_capacity": 3,
+            "street_capacity": 2,
+            "public_trust": -4,
+            "spillover": -3
+          }
+        },
+        {
+          "id": "B",
+          "label": "保关键交流节点，其余简装",
+          "desc": "保留能形成连接的核心共享空间，其余采用低成本可逆方案。",
+          "delta": {
+            "asset": 2,
+            "innovation": 6,
+            "collaboration": 8,
+            "openness": 6,
+            "public_value": 7
+          },
+          "condition_delta": {
+            "capital_resilience": 0,
+            "tenant_stability": 2,
+            "execution_capacity": 1,
+            "street_capacity": 2,
+            "public_trust": 6,
+            "spillover": 5
+          }
+        },
+        {
+          "id": "C",
+          "label": "保持高规格完整设计",
+          "desc": "不降低空间品质，接受更高资金压力。",
+          "delta": {
+            "asset": -4,
+            "innovation": 11,
+            "collaboration": 3,
+            "openness": 5,
+            "public_value": 2
+          },
+          "condition_delta": {
+            "capital_resilience": -8,
+            "tenant_stability": -3,
+            "execution_capacity": -7,
+            "street_capacity": -6,
+            "public_trust": 1,
+            "spillover": 6
+          }
+        }
+      ],
+      "case_choice": null,
+      "case_result": "情景卡没有唯一“案例正确答案”。系统将结合你的选择、当前状态和五方协商继续推演。",
+      "source_section": "情景推演卡｜非案例事实",
+      "when": [],
+      "branch_note": "",
+      "event_type": "随机情景",
+      "special": true,
+      "random_weight": 1.1,
+      "stage_id": 3
+    },
+    {
+      "id": 27,
+      "chapter": "随机事件 · 渐进更新",
+      "title": "老商户联名要求保留：街区记忆要不要留下？",
+      "situation": "部分长期经营商户认为全面产业化会失去原有生活气息，希望保留一定比例的老店和生活服务。",
+      "fact": "本卡为基于案例已识别矛盾设计的情景推演，不代表AI原点社区真实发生过该事件。",
+      "question": "更新中如何处理原有业态？",
+      "options": [
+        {
+          "id": "A",
+          "label": "按新定位全部替换",
+          "desc": "保证产业形象统一，减少业态混杂。",
+          "delta": {
+            "asset": -4,
+            "innovation": 8,
+            "collaboration": 3,
+            "openness": -6,
+            "public_value": -7
+          },
+          "condition_delta": {
+            "capital_resilience": -8,
+            "tenant_stability": -10,
+            "execution_capacity": -7,
+            "street_capacity": -6,
+            "public_trust": -8,
+            "spillover": 6
+          }
+        },
+        {
+          "id": "B",
+          "label": "筛选保留 + 帮助适配新客群",
+          "desc": "保留能服务新旧人群的商户，并提供过渡和场景调整。",
+          "delta": {
+            "asset": 2,
+            "innovation": 6,
+            "collaboration": 8,
+            "openness": 6,
+            "public_value": 11
+          },
+          "condition_delta": {
+            "capital_resilience": 0,
+            "tenant_stability": 11,
+            "execution_capacity": 1,
+            "street_capacity": 2,
+            "public_trust": 9,
+            "spillover": 5
+          }
+        },
+        {
+          "id": "C",
+          "label": "尽量全部保留",
+          "desc": "把租户稳定放在首位，减少更新冲突。",
+          "delta": {
+            "asset": 7,
+            "innovation": -7,
+            "collaboration": -3,
+            "openness": -3,
+            "public_value": 4
+          },
+          "condition_delta": {
+            "capital_resilience": 7,
+            "tenant_stability": 12,
+            "execution_capacity": 3,
+            "street_capacity": 2,
+            "public_trust": -4,
+            "spillover": -3
+          }
+        }
+      ],
+      "case_choice": null,
+      "case_result": "情景卡没有唯一“案例正确答案”。系统将结合你的选择、当前状态和五方协商继续推演。",
+      "source_section": "情景推演卡｜非案例事实",
+      "when": [],
+      "branch_note": "",
+      "event_type": "随机情景",
+      "special": true,
+      "random_weight": 0.9,
+      "stage_id": 3
+    },
+    {
+      "id": 28,
+      "chapter": "随机事件 · 空间分配",
+      "title": "高租金品牌店愿意签五年：黄金铺面还开放吗？",
+      "situation": "一个稳定品牌愿意长期承租一层核心位置，租金明显高于公共交流空间的直接收益。",
+      "fact": "本卡为基于案例已识别矛盾设计的情景推演，不代表AI原点社区真实发生过该事件。",
+      "question": "面对确定租金和公共交往空间，你选什么？",
+      "options": [
+        {
+          "id": "A",
+          "label": "签长期租约",
+          "desc": "优先锁定稳定现金流。",
+          "delta": {
+            "asset": 11,
+            "innovation": -5,
+            "collaboration": -3,
+            "openness": -9,
+            "public_value": -8
+          },
+          "condition_delta": {
+            "capital_resilience": 7,
+            "tenant_stability": 3,
+            "execution_capacity": 3,
+            "street_capacity": 2,
+            "public_trust": -4,
+            "spillover": -3
+          }
+        },
+        {
+          "id": "B",
+          "label": "缩小商业面积，保留关键公共节点",
+          "desc": "只出租部分黄金铺面，用收益反哺共享空间。",
+          "delta": {
+            "asset": 6,
+            "innovation": 6,
+            "collaboration": 8,
+            "openness": 7,
+            "public_value": 8
+          },
+          "condition_delta": {
+            "capital_resilience": 0,
+            "tenant_stability": 2,
+            "execution_capacity": 1,
+            "street_capacity": 2,
+            "public_trust": 6,
+            "spillover": 5
+          }
+        },
+        {
+          "id": "C",
+          "label": "拒绝品牌店，全部用于开放交流",
+          "desc": "最大化公共与创新空间，承担更高机会成本。",
+          "delta": {
+            "asset": -5,
+            "innovation": 8,
+            "collaboration": 7,
+            "openness": 13,
+            "public_value": 14
+          },
+          "condition_delta": {
+            "capital_resilience": -7,
+            "tenant_stability": 1,
+            "execution_capacity": -5,
+            "street_capacity": 2,
+            "public_trust": 13,
+            "spillover": 5
+          }
+        }
+      ],
+      "case_choice": null,
+      "case_result": "情景卡没有唯一“案例正确答案”。系统将结合你的选择、当前状态和五方协商继续推演。",
+      "source_section": "情景推演卡｜非案例事实",
+      "when": [],
+      "branch_note": "",
+      "event_type": "随机情景",
+      "special": true,
+      "random_weight": 1.3,
+      "stage_id": 4
+    },
+    {
+      "id": 29,
+      "chapter": "随机事件 · 空间分配",
+      "title": "创业团队要求24小时开放：开放强度要到什么程度？",
+      "situation": "多家创业团队希望夜间继续研发、开会和接待合作方，但24小时开放会增加安保、能耗和居民干扰。",
+      "fact": "本卡为基于案例已识别矛盾设计的情景推演，不代表AI原点社区真实发生过该事件。",
+      "question": "是否开放24小时？",
+      "options": [
+        {
+          "id": "A",
+          "label": "维持正常办公时段",
+          "desc": "控制运营成本和夜间风险。",
+          "delta": {
+            "asset": 7,
+            "innovation": -5,
+            "collaboration": -3,
+            "openness": -3,
+            "public_value": -4
+          },
+          "condition_delta": {
+            "capital_resilience": 7,
+            "tenant_stability": 3,
+            "execution_capacity": 3,
+            "street_capacity": 2,
+            "public_trust": -4,
+            "spillover": -3
+          }
+        },
+        {
+          "id": "B",
+          "label": "核心研发区延时 + 公共区限时",
+          "desc": "对不同空间实行不同开放时段和预约规则。",
+          "delta": {
+            "asset": 2,
+            "innovation": 8,
+            "collaboration": 8,
+            "openness": 6,
+            "public_value": 7
+          },
+          "condition_delta": {
+            "capital_resilience": 0,
+            "tenant_stability": 2,
+            "execution_capacity": -2,
+            "street_capacity": 2,
+            "public_trust": 4,
+            "spillover": 5
+          }
+        },
+        {
+          "id": "C",
+          "label": "全面24小时开放",
+          "desc": "最大化创业便利和活力。",
+          "delta": {
+            "asset": -4,
+            "innovation": 13,
+            "collaboration": 3,
+            "openness": 5,
+            "public_value": 2
+          },
+          "condition_delta": {
+            "capital_resilience": -8,
+            "tenant_stability": -3,
+            "execution_capacity": -10,
+            "street_capacity": -6,
+            "public_trust": -5,
+            "spillover": 6
+          }
+        }
+      ],
+      "case_choice": null,
+      "case_result": "情景卡没有唯一“案例正确答案”。系统将结合你的选择、当前状态和五方协商继续推演。",
+      "source_section": "情景推演卡｜非案例事实",
+      "when": [],
+      "branch_note": "",
+      "event_type": "随机情景",
+      "special": true,
+      "random_weight": 1.0,
+      "stage_id": 4
+    },
+    {
+      "id": 30,
+      "chapter": "随机事件 · 空间分配",
+      "title": "亲子AI体验需求暴增：要不要拿出更多周末空间？",
+      "situation": "周边家庭希望增加机器人、AI体验和青少年活动，但周末也是企业路演和培训高峰。",
+      "fact": "本卡为基于案例已识别矛盾设计的情景推演，不代表AI原点社区真实发生过该事件。",
+      "question": "周末空间如何分配？",
+      "options": [
+        {
+          "id": "A",
+          "label": "企业活动优先",
+          "desc": "保持高价值专业活动连续性。",
+          "delta": {
+            "asset": 7,
+            "innovation": 8,
+            "collaboration": -3,
+            "openness": -3,
+            "public_value": -5
+          },
+          "condition_delta": {
+            "capital_resilience": 7,
+            "tenant_stability": 3,
+            "execution_capacity": 3,
+            "street_capacity": 2,
+            "public_trust": -4,
+            "spillover": -3
+          }
+        },
+        {
+          "id": "B",
+          "label": "周末分时共享",
+          "desc": "固定部分时段给公众体验，其他时段保留专业活动。",
+          "delta": {
+            "asset": 2,
+            "innovation": 6,
+            "collaboration": 8,
+            "openness": 10,
+            "public_value": 12
+          },
+          "condition_delta": {
+            "capital_resilience": 0,
+            "tenant_stability": 2,
+            "execution_capacity": 1,
+            "street_capacity": 2,
+            "public_trust": 6,
+            "spillover": 5
+          }
+        },
+        {
+          "id": "C",
+          "label": "大幅转向家庭和公众活动",
+          "desc": "把周末主要空间开放给社区家庭。",
+          "delta": {
+            "asset": -5,
+            "innovation": -2,
+            "collaboration": 7,
+            "openness": 13,
+            "public_value": 14
+          },
+          "condition_delta": {
+            "capital_resilience": -7,
+            "tenant_stability": 1,
+            "execution_capacity": -5,
+            "street_capacity": 2,
+            "public_trust": 13,
+            "spillover": 5
+          }
+        }
+      ],
+      "case_choice": null,
+      "case_result": "情景卡没有唯一“案例正确答案”。系统将结合你的选择、当前状态和五方协商继续推演。",
+      "source_section": "情景推演卡｜非案例事实",
+      "when": [],
+      "branch_note": "",
+      "event_type": "随机情景",
+      "special": true,
+      "random_weight": 1.0,
+      "stage_id": 4
+    },
+    {
+      "id": 31,
+      "chapter": "随机事件 · 空间分配",
+      "title": "无障碍与适老改造被提出：有限预算怎么排优先级？",
+      "situation": "公众反馈指出部分入口、卫生间和休息点对老人、轮椅和儿童不够友好。",
+      "fact": "本卡为基于案例已识别矛盾设计的情景推演，不代表AI原点社区真实发生过该事件。",
+      "question": "你怎样安排这一类不直接带来租金的改造？",
+      "options": [
+        {
+          "id": "A",
+          "label": "等整体二期再统一处理",
+          "desc": "避免当前预算进一步分散。",
+          "delta": {
+            "asset": 7,
+            "innovation": -5,
+            "collaboration": -3,
+            "openness": -3,
+            "public_value": -6
+          },
+          "condition_delta": {
+            "capital_resilience": 7,
+            "tenant_stability": 3,
+            "execution_capacity": 3,
+            "street_capacity": 2,
+            "public_trust": -8,
+            "spillover": -3
+          }
+        },
+        {
+          "id": "B",
+          "label": "先做关键路径和高频节点",
+          "desc": "优先改入口、卫生间、休息点和导视，分期完成。",
+          "delta": {
+            "asset": 0,
+            "innovation": 2,
+            "collaboration": 7,
+            "openness": 13,
+            "public_value": 14
+          },
+          "condition_delta": {
+            "capital_resilience": -7,
+            "tenant_stability": 1,
+            "execution_capacity": 1,
+            "street_capacity": 2,
+            "public_trust": 13,
+            "spillover": 5
+          }
+        },
+        {
+          "id": "C",
+          "label": "一次性全面升级",
+          "desc": "快速达到较高无障碍标准，但占用大量当期预算。",
+          "delta": {
+            "asset": -4,
+            "innovation": 11,
+            "collaboration": 3,
+            "openness": 12,
+            "public_value": 12
+          },
+          "condition_delta": {
+            "capital_resilience": -12,
+            "tenant_stability": -3,
+            "execution_capacity": -7,
+            "street_capacity": -6,
+            "public_trust": 1,
+            "spillover": 6
+          }
+        }
+      ],
+      "case_choice": null,
+      "case_result": "情景卡没有唯一“案例正确答案”。系统将结合你的选择、当前状态和五方协商继续推演。",
+      "source_section": "情景推演卡｜非案例事实",
+      "when": [],
+      "branch_note": "",
+      "event_type": "随机情景",
+      "special": true,
+      "random_weight": 0.9,
+      "stage_id": 4
+    },
+    {
+      "id": 32,
+      "chapter": "随机事件 · 资源组织",
+      "title": "算力价格上涨：企业服务接口首先保什么？",
+      "situation": "多家初创企业反映算力成本上涨，如果不提供支持，部分团队可能缩减研发或搬离。",
+      "fact": "本卡为基于案例已识别矛盾设计的情景推演，不代表AI原点社区真实发生过该事件。",
+      "question": "资源有限时，怎么回应算力压力？",
+      "options": [
+        {
+          "id": "A",
+          "label": "不做补贴，让企业自行采购",
+          "desc": "避免平台承担持续成本。",
+          "delta": {
+            "asset": 7,
+            "innovation": -7,
+            "collaboration": -3,
+            "openness": -3,
+            "public_value": -4
+          },
+          "condition_delta": {
+            "capital_resilience": 7,
+            "tenant_stability": 3,
+            "execution_capacity": 3,
+            "street_capacity": 2,
+            "public_trust": -4,
+            "spillover": -3
+          }
+        },
+        {
+          "id": "B",
+          "label": "集中采购 + 分级额度 + 绩效复盘",
+          "desc": "用共享采购降低成本，但控制额度并绑定使用反馈。",
+          "delta": {
+            "asset": 1,
+            "innovation": 10,
+            "collaboration": 12,
+            "openness": 6,
+            "public_value": 7
+          },
+          "condition_delta": {
+            "capital_resilience": -4,
+            "tenant_stability": 6,
+            "execution_capacity": -3,
+            "street_capacity": -2,
+            "public_trust": 6,
+            "spillover": 11
+          }
+        },
+        {
+          "id": "C",
+          "label": "大额补贴抢企业",
+          "desc": "用低价算力迅速吸引企业和项目。",
+          "delta": {
+            "asset": -4,
+            "innovation": 14,
+            "collaboration": 3,
+            "openness": 5,
+            "public_value": 2
+          },
+          "condition_delta": {
+            "capital_resilience": -13,
+            "tenant_stability": -3,
+            "execution_capacity": -7,
+            "street_capacity": -6,
+            "public_trust": 1,
+            "spillover": 6
+          }
+        }
+      ],
+      "case_choice": null,
+      "case_result": "情景卡没有唯一“案例正确答案”。系统将结合你的选择、当前状态和五方协商继续推演。",
+      "source_section": "情景推演卡｜非案例事实",
+      "when": [
+        {
+          "path": "scores.innovation",
+          "op": "gte",
+          "value": 60
+        }
+      ],
+      "branch_note": "创新企业密度上升，触发“算力成本”资源卡。",
+      "event_type": "随机情景",
+      "special": true,
+      "random_weight": 1.2,
+      "stage_id": 5
+    },
+    {
+      "id": 33,
+      "chapter": "随机事件 · 资源组织",
+      "title": "投资机构减少线下活动：资源网络出现空洞",
+      "situation": "原本高频出现的投资机构减少线下参与，创业团队感觉活动仍多，但融资连接变弱。",
+      "fact": "本卡为基于案例已识别矛盾设计的情景推演，不代表AI原点社区真实发生过该事件。",
+      "question": "怎么修复融资资源网络？",
+      "options": [
+        {
+          "id": "A",
+          "label": "增加更多公开路演",
+          "desc": "用活动数量弥补投资人减少。",
+          "delta": {
+            "asset": -4,
+            "innovation": 6,
+            "collaboration": 3,
+            "openness": 5,
+            "public_value": 2
+          },
+          "condition_delta": {
+            "capital_resilience": -8,
+            "tenant_stability": -3,
+            "execution_capacity": -7,
+            "street_capacity": -6,
+            "public_trust": 1,
+            "spillover": 6
+          }
+        },
+        {
+          "id": "B",
+          "label": "小规模闭门匹配 + 跟踪转化",
+          "desc": "减少大而泛的活动，建立项目筛选、定向匹配和后续跟踪。",
+          "delta": {
+            "asset": 0,
+            "innovation": 10,
+            "collaboration": 12,
+            "openness": 6,
+            "public_value": 7
+          },
+          "condition_delta": {
+            "capital_resilience": -2,
+            "tenant_stability": 1,
+            "execution_capacity": -3,
+            "street_capacity": -2,
+            "public_trust": 6,
+            "spillover": 11
+          }
+        },
+        {
+          "id": "C",
+          "label": "暂时不做融资服务",
+          "desc": "把平台资源集中在空间和基础服务。",
+          "delta": {
+            "asset": 7,
+            "innovation": -6,
+            "collaboration": -5,
+            "openness": -3,
+            "public_value": -4
+          },
+          "condition_delta": {
+            "capital_resilience": 7,
+            "tenant_stability": 3,
+            "execution_capacity": 3,
+            "street_capacity": 2,
+            "public_trust": -4,
+            "spillover": -3
+          }
+        }
+      ],
+      "case_choice": null,
+      "case_result": "情景卡没有唯一“案例正确答案”。系统将结合你的选择、当前状态和五方协商继续推演。",
+      "source_section": "情景推演卡｜非案例事实",
+      "when": [],
+      "branch_note": "",
+      "event_type": "随机情景",
+      "special": true,
+      "random_weight": 1.0,
+      "stage_id": 5
+    },
+    {
+      "id": 34,
+      "chapter": "随机事件 · 资源组织",
+      "title": "高校成果转化项目集中入场：谁来当“翻译器”？",
+      "situation": "科研团队有技术，但缺市场、法务、产品和融资经验；企业又难快速判断哪些成果值得合作。",
+      "fact": "本卡为基于案例已识别矛盾设计的情景推演，不代表AI原点社区真实发生过该事件。",
+      "question": "如何组织高校成果转化？",
+      "options": [
+        {
+          "id": "A",
+          "label": "让科研团队自行找企业",
+          "desc": "平台只提供场地，减少协调投入。",
+          "delta": {
+            "asset": 7,
+            "innovation": 2,
+            "collaboration": -4,
+            "openness": -3,
+            "public_value": -4
+          },
+          "condition_delta": {
+            "capital_resilience": 7,
+            "tenant_stability": 3,
+            "execution_capacity": 3,
+            "street_capacity": 2,
+            "public_trust": -4,
+            "spillover": -3
+          }
+        },
+        {
+          "id": "B",
+          "label": "建立技术经理人/项目经理机制",
+          "desc": "用专人把技术、场景、资本和企业需求翻译成可对接任务。",
+          "delta": {
+            "asset": 0,
+            "innovation": 13,
+            "collaboration": 14,
+            "openness": 6,
+            "public_value": 7
+          },
+          "condition_delta": {
+            "capital_resilience": -2,
+            "tenant_stability": 1,
+            "execution_capacity": -3,
+            "street_capacity": -2,
+            "public_trust": 6,
+            "spillover": 11
+          }
+        },
+        {
+          "id": "C",
+          "label": "集中做大型成果展示周",
+          "desc": "用品牌活动快速扩大曝光。",
+          "delta": {
+            "asset": -4,
+            "innovation": 9,
+            "collaboration": 3,
+            "openness": 7,
+            "public_value": 2
+          },
+          "condition_delta": {
+            "capital_resilience": -8,
+            "tenant_stability": -3,
+            "execution_capacity": -6,
+            "street_capacity": -6,
+            "public_trust": 1,
+            "spillover": 6
+          }
+        }
+      ],
+      "case_choice": null,
+      "case_result": "情景卡没有唯一“案例正确答案”。系统将结合你的选择、当前状态和五方协商继续推演。",
+      "source_section": "情景推演卡｜非案例事实",
+      "when": [],
+      "branch_note": "",
+      "event_type": "随机情景",
+      "special": true,
+      "random_weight": 1.1,
+      "stage_id": 5
+    },
+    {
+      "id": 35,
+      "chapter": "随机事件 · 活力承载",
+      "title": "机器人配送与外卖高峰叠加：入口开始“堵车”",
+      "situation": "午间机器人、外卖骑手、员工和访客同时集中在主要入口，短时间拥堵明显。",
+      "fact": "本卡为基于案例已识别矛盾设计的情景推演，不代表AI原点社区真实发生过该事件。",
+      "question": "怎么治理新型配送与传统人流叠加？",
+      "options": [
+        {
+          "id": "A",
+          "label": "禁止机器人进入核心区域",
+          "desc": "最快降低冲突，但削弱新技术场景。",
+          "delta": {
+            "asset": 3,
+            "innovation": -7,
+            "collaboration": 1,
+            "openness": -7,
+            "public_value": 3
+          },
+          "condition_delta": {
+            "capital_resilience": 4,
+            "tenant_stability": 4,
+            "execution_capacity": 5,
+            "street_capacity": 7,
+            "public_trust": -6,
+            "spillover": -4
+          }
+        },
+        {
+          "id": "B",
+          "label": "设置配送时窗、停靠区和绕行线",
+          "desc": "通过空间与时间规则分流，不完全禁止新技术。",
+          "delta": {
+            "asset": 0,
+            "innovation": 6,
+            "collaboration": 10,
+            "openness": 8,
+            "public_value": 10
+          },
+          "condition_delta": {
+            "capital_resilience": -2,
+            "tenant_stability": 2,
+            "execution_capacity": 5,
+            "street_capacity": 12,
+            "public_trust": 8,
+            "spillover": 4
+          }
+        },
+        {
+          "id": "C",
+          "label": "保持开放，让市场自行适应",
+          "desc": "不增加规则，优先保持便利和创新自由。",
+          "delta": {
+            "asset": -4,
+            "innovation": 11,
+            "collaboration": 3,
+            "openness": 5,
+            "public_value": -8
+          },
+          "condition_delta": {
+            "capital_resilience": -8,
+            "tenant_stability": -3,
+            "execution_capacity": -7,
+            "street_capacity": -13,
+            "public_trust": -8,
+            "spillover": 6
+          }
+        }
+      ],
+      "case_choice": null,
+      "case_result": "情景卡没有唯一“案例正确答案”。系统将结合你的选择、当前状态和五方协商继续推演。",
+      "source_section": "情景推演卡｜非案例事实",
+      "when": [
+        {
+          "path": "conditions.street_capacity",
+          "op": "lt",
+          "value": 65
+        }
+      ],
+      "branch_note": "街区承载偏紧，触发“机器人配送冲突”卡。",
+      "event_type": "随机情景",
+      "special": true,
+      "random_weight": 1.4,
+      "stage_id": 6
+    },
+    {
+      "id": 36,
+      "chapter": "随机事件 · 活力承载",
+      "title": "大型路演撞上通勤高峰：活动还要不要继续加码？",
+      "situation": "一场重要路演预计带来大量访客，但时间与工作日晚高峰重叠，周边交通和停车压力可能明显增加。",
+      "fact": "本卡为基于案例已识别矛盾设计的情景推演，不代表AI原点社区真实发生过该事件。",
+      "question": "你会如何处理？",
+      "options": [
+        {
+          "id": "A",
+          "label": "照常举办",
+          "desc": "优先保证产业活动和品牌影响。",
+          "delta": {
+            "asset": -4,
+            "innovation": 10,
+            "collaboration": 3,
+            "openness": 5,
+            "public_value": 2
+          },
+          "condition_delta": {
+            "capital_resilience": -8,
+            "tenant_stability": -3,
+            "execution_capacity": -7,
+            "street_capacity": -12,
+            "public_trust": -6,
+            "spillover": 6
+          }
+        },
+        {
+          "id": "B",
+          "label": "改时段 + 预约 + 公交引导",
+          "desc": "保留活动，但用容量管理减少外部冲击。",
+          "delta": {
+            "asset": 0,
+            "innovation": 3,
+            "collaboration": 9,
+            "openness": 8,
+            "public_value": 10
+          },
+          "condition_delta": {
+            "capital_resilience": -2,
+            "tenant_stability": 2,
+            "execution_capacity": 5,
+            "street_capacity": 12,
+            "public_trust": 8,
+            "spillover": 4
+          }
+        },
+        {
+          "id": "C",
+          "label": "取消大型活动",
+          "desc": "直接消除峰值压力。",
+          "delta": {
+            "asset": 3,
+            "innovation": -7,
+            "collaboration": 1,
+            "openness": -4,
+            "public_value": -5
+          },
+          "condition_delta": {
+            "capital_resilience": 4,
+            "tenant_stability": 4,
+            "execution_capacity": 5,
+            "street_capacity": 7,
+            "public_trust": -6,
+            "spillover": -4
+          }
+        }
+      ],
+      "case_choice": null,
+      "case_result": "情景卡没有唯一“案例正确答案”。系统将结合你的选择、当前状态和五方协商继续推演。",
+      "source_section": "情景推演卡｜非案例事实",
+      "when": [],
+      "branch_note": "",
+      "event_type": "随机情景",
+      "special": true,
+      "random_weight": 1.0,
+      "stage_id": 6
+    },
+    {
+      "id": 37,
+      "chapter": "随机事件 · 活力承载",
+      "title": "极端高温来袭：开放空间与能耗压力同时上升",
+      "situation": "连续高温使室内公共空间需求上升，空调和设备能耗也明显增加，长时间活动带来额外运维压力。",
+      "fact": "本卡为基于案例已识别矛盾设计的情景推演，不代表AI原点社区真实发生过该事件。",
+      "question": "高温期如何安排开放和活动？",
+      "options": [
+        {
+          "id": "A",
+          "label": "缩短开放时间",
+          "desc": "控制能耗和运维成本。",
+          "delta": {
+            "asset": 7,
+            "innovation": -5,
+            "collaboration": -3,
+            "openness": -7,
+            "public_value": -5
+          },
+          "condition_delta": {
+            "capital_resilience": 7,
+            "tenant_stability": 3,
+            "execution_capacity": 3,
+            "street_capacity": 2,
+            "public_trust": -4,
+            "spillover": -3
+          }
+        },
+        {
+          "id": "B",
+          "label": "保留避暑公共节点 + 调整高耗能活动",
+          "desc": "把基本公共服务和重点活动分开管理。",
+          "delta": {
+            "asset": 2,
+            "innovation": 6,
+            "collaboration": 8,
+            "openness": 6,
+            "public_value": 9
+          },
+          "condition_delta": {
+            "capital_resilience": -2,
+            "tenant_stability": 2,
+            "execution_capacity": 2,
+            "street_capacity": 2,
+            "public_trust": 6,
+            "spillover": 5
+          }
+        },
+        {
+          "id": "C",
+          "label": "保持全部开放并增加活动",
+          "desc": "用高温期增加室内吸引力，但承受更高成本。",
+          "delta": {
+            "asset": -5,
+            "innovation": 6,
+            "collaboration": 7,
+            "openness": 13,
+            "public_value": 14
+          },
+          "condition_delta": {
+            "capital_resilience": -10,
+            "tenant_stability": 1,
+            "execution_capacity": -7,
+            "street_capacity": 2,
+            "public_trust": 13,
+            "spillover": 5
+          }
+        }
+      ],
+      "case_choice": null,
+      "case_result": "情景卡没有唯一“案例正确答案”。系统将结合你的选择、当前状态和五方协商继续推演。",
+      "source_section": "情景推演卡｜非案例事实",
+      "when": [],
+      "branch_note": "",
+      "event_type": "随机情景",
+      "special": true,
+      "random_weight": 0.8,
+      "stage_id": 6
+    },
+    {
+      "id": 38,
+      "chapter": "随机事件 · 公众关系",
+      "title": "居民连续投诉夜间噪声：创新活力和安静生活冲突",
+      "situation": "夜间活动、设备测试和人员聚集引发附近居民投诉，舆情开始出现“科技街区扰民”的说法。",
+      "fact": "本卡为基于案例已识别矛盾设计的情景推演，不代表AI原点社区真实发生过该事件。",
+      "question": "如何回应夜间噪声？",
+      "options": [
+        {
+          "id": "A",
+          "label": "压缩所有夜间活动",
+          "desc": "快速降低扰民风险。",
+          "delta": {
+            "asset": 3,
+            "innovation": -8,
+            "collaboration": 1,
+            "openness": -7,
+            "public_value": 6
+          },
+          "condition_delta": {
+            "capital_resilience": 4,
+            "tenant_stability": 4,
+            "execution_capacity": 5,
+            "street_capacity": 7,
+            "public_trust": 7,
+            "spillover": -4
+          }
+        },
+        {
+          "id": "B",
+          "label": "分区分级 + 噪声阈值 + 投诉闭环",
+          "desc": "保留低干扰活动，对高噪声活动设置空间和时段边界。",
+          "delta": {
+            "asset": 0,
+            "innovation": 3,
+            "collaboration": 11,
+            "openness": 8,
+            "public_value": 12
+          },
+          "condition_delta": {
+            "capital_resilience": -2,
+            "tenant_stability": 2,
+            "execution_capacity": 5,
+            "street_capacity": 12,
+            "public_trust": 8,
+            "spillover": 4
+          }
+        },
+        {
+          "id": "C",
+          "label": "解释创新需要活力，请居民理解",
+          "desc": "不改变现有安排，以沟通为主。",
+          "delta": {
+            "asset": -4,
+            "innovation": 11,
+            "collaboration": 3,
+            "openness": 5,
+            "public_value": -9
+          },
+          "condition_delta": {
+            "capital_resilience": -8,
+            "tenant_stability": -3,
+            "execution_capacity": -7,
+            "street_capacity": -6,
+            "public_trust": -12,
+            "spillover": 6
+          }
+        }
+      ],
+      "case_choice": null,
+      "case_result": "情景卡没有唯一“案例正确答案”。系统将结合你的选择、当前状态和五方协商继续推演。",
+      "source_section": "情景推演卡｜非案例事实",
+      "when": [
+        {
+          "path": "conditions.public_trust",
+          "op": "lt",
+          "value": 68
+        }
+      ],
+      "branch_note": "公众信任承压，触发“夜间噪声投诉”卡。",
+      "event_type": "随机情景",
+      "special": true,
+      "random_weight": 1.4,
+      "stage_id": 7
+    },
+    {
+      "id": 39,
+      "chapter": "随机事件 · 公众关系",
+      "title": "青少年AI夜校爆满：公共服务成功之后怎么办？",
+      "situation": "一次面向青少年的AI活动报名远超容量，家长要求增加场次，企业则担心公共活动挤占专业空间。",
+      "fact": "本卡为基于案例已识别矛盾设计的情景推演，不代表AI原点社区真实发生过该事件。",
+      "question": "需求爆满后如何扩容？",
+      "options": [
+        {
+          "id": "A",
+          "label": "维持小规模抽签",
+          "desc": "控制成本和空间占用。",
+          "delta": {
+            "asset": 7,
+            "innovation": -5,
+            "collaboration": -3,
+            "openness": -3,
+            "public_value": 3
+          },
+          "condition_delta": {
+            "capital_resilience": 7,
+            "tenant_stability": 3,
+            "execution_capacity": 3,
+            "street_capacity": 2,
+            "public_trust": -4,
+            "spillover": -3
+          }
+        },
+        {
+          "id": "B",
+          "label": "培训志愿导师 + 分散到周边节点",
+          "desc": "把课程标准化后向外围空间扩散，核心区保留高阶内容。",
+          "delta": {
+            "asset": 0,
+            "innovation": 10,
+            "collaboration": 12,
+            "openness": 12,
+            "public_value": 14
+          },
+          "condition_delta": {
+            "capital_resilience": -2,
+            "tenant_stability": 1,
+            "execution_capacity": -3,
+            "street_capacity": -2,
+            "public_trust": 6,
+            "spillover": 11
+          }
+        },
+        {
+          "id": "C",
+          "label": "核心区全面扩容",
+          "desc": "把更多核心空间投入夜校和公众课程。",
+          "delta": {
+            "asset": -5,
+            "innovation": -3,
+            "collaboration": 7,
+            "openness": 13,
+            "public_value": 14
+          },
+          "condition_delta": {
+            "capital_resilience": -7,
+            "tenant_stability": 1,
+            "execution_capacity": -9,
+            "street_capacity": 2,
+            "public_trust": 13,
+            "spillover": 5
+          }
+        }
+      ],
+      "case_choice": null,
+      "case_result": "情景卡没有唯一“案例正确答案”。系统将结合你的选择、当前状态和五方协商继续推演。",
+      "source_section": "情景推演卡｜非案例事实",
+      "when": [],
+      "branch_note": "",
+      "event_type": "随机情景",
+      "special": true,
+      "random_weight": 1.1,
+      "stage_id": 7
+    },
+    {
+      "id": 40,
+      "chapter": "随机事件 · 公众关系",
+      "title": "媒体质疑：“科技街区离普通人太远”",
+      "situation": "一篇评论认为街区活动高度专业化，普通居民虽然能进入，但很难持续参与和获得实际便利。",
+      "fact": "本卡为基于案例已识别矛盾设计的情景推演，不代表AI原点社区真实发生过该事件。",
+      "question": "面对这种质疑，你会怎么调整？",
+      "options": [
+        {
+          "id": "A",
+          "label": "加强品牌宣传和成果展示",
+          "desc": "用更多传播解释项目价值。",
+          "delta": {
+            "asset": 7,
+            "innovation": 4,
+            "collaboration": -3,
+            "openness": -3,
+            "public_value": -2
+          },
+          "condition_delta": {
+            "capital_resilience": 7,
+            "tenant_stability": 3,
+            "execution_capacity": 3,
+            "street_capacity": 2,
+            "public_trust": -4,
+            "spillover": -3
+          }
+        },
+        {
+          "id": "B",
+          "label": "用生活问题共创一批可验证项目",
+          "desc": "邀请居民提出通行、教育、养老等问题，让企业围绕真实需求试点。",
+          "delta": {
+            "asset": 0,
+            "innovation": 10,
+            "collaboration": 13,
+            "openness": 6,
+            "public_value": 15
+          },
+          "condition_delta": {
+            "capital_resilience": -2,
+            "tenant_stability": 1,
+            "execution_capacity": -3,
+            "street_capacity": -2,
+            "public_trust": 6,
+            "spillover": 11
+          }
+        },
+        {
+          "id": "C",
+          "label": "大幅增加免费公众活动",
+          "desc": "用数量提高参与规模。",
+          "delta": {
+            "asset": -5,
+            "innovation": 2,
+            "collaboration": 7,
+            "openness": 14,
+            "public_value": 14
+          },
+          "condition_delta": {
+            "capital_resilience": -7,
+            "tenant_stability": 1,
+            "execution_capacity": -9,
+            "street_capacity": -6,
+            "public_trust": 13,
+            "spillover": 5
+          }
+        }
+      ],
+      "case_choice": null,
+      "case_result": "情景卡没有唯一“案例正确答案”。系统将结合你的选择、当前状态和五方协商继续推演。",
+      "source_section": "情景推演卡｜非案例事实",
+      "when": [],
+      "branch_note": "",
+      "event_type": "随机情景",
+      "special": true,
+      "random_weight": 1.0,
+      "stage_id": 7
+    },
+    {
+      "id": 41,
+      "chapter": "随机事件 · 协同机制",
+      "title": "多产权主体拒绝共担维护：围墙能开，账单谁付？",
+      "situation": "公共通道和开放空间已经形成，但部分产权主体认为受益不对等，不愿持续分担保洁、安保和维修。",
+      "fact": "本卡为基于案例已识别矛盾设计的情景推演，不代表AI原点社区真实发生过该事件。",
+      "question": "维护成本分担谈不拢怎么办？",
+      "options": [
+        {
+          "id": "A",
+          "label": "由核心运营方先垫付",
+          "desc": "先维持开放，再慢慢谈成本。",
+          "delta": {
+            "asset": -5,
+            "innovation": 2,
+            "collaboration": 2,
+            "openness": 13,
+            "public_value": 14
+          },
+          "condition_delta": {
+            "capital_resilience": -13,
+            "tenant_stability": 1,
+            "execution_capacity": -5,
+            "street_capacity": 2,
+            "public_trust": 13,
+            "spillover": 5
+          }
+        },
+        {
+          "id": "B",
+          "label": "按使用量、受益和产权面积组合分摊",
+          "desc": "建立可调整的成本分担公式并定期复盘。",
+          "delta": {
+            "asset": 4,
+            "innovation": 5,
+            "collaboration": 15,
+            "openness": 5,
+            "public_value": 10
+          },
+          "condition_delta": {
+            "capital_resilience": 5,
+            "tenant_stability": 2,
+            "execution_capacity": 8,
+            "street_capacity": 3,
+            "public_trust": 7,
+            "spillover": 7
+          }
+        },
+        {
+          "id": "C",
+          "label": "各管各的，缩回产权边界",
+          "desc": "减少协同成本，但开放空间重新碎片化。",
+          "delta": {
+            "asset": 7,
+            "innovation": -5,
+            "collaboration": -3,
+            "openness": -11,
+            "public_value": -9
+          },
+          "condition_delta": {
+            "capital_resilience": 7,
+            "tenant_stability": 3,
+            "execution_capacity": 3,
+            "street_capacity": -7,
+            "public_trust": -4,
+            "spillover": -3
+          }
+        }
+      ],
+      "case_choice": null,
+      "case_result": "情景卡没有唯一“案例正确答案”。系统将结合你的选择、当前状态和五方协商继续推演。",
+      "source_section": "情景推演卡｜非案例事实",
+      "when": [
+        {
+          "path": "scores.collaboration",
+          "op": "lt",
+          "value": 72
+        }
+      ],
+      "branch_note": "协同基础不稳，触发“维护成本争议”卡。",
+      "event_type": "随机情景",
+      "special": true,
+      "random_weight": 1.4,
+      "stage_id": 8
+    },
+    {
+      "id": 42,
+      "chapter": "随机事件 · 协同机制",
+      "title": "跨部门审批互相等待：一个小项目卡了三周",
+      "situation": "交通、城管、产权和运营各自都有流程，谁都没有否决，但也没有人能推动项目进入下一步。",
+      "fact": "本卡为基于案例已识别矛盾设计的情景推演，不代表AI原点社区真实发生过该事件。",
+      "question": "如何解决“无人反对但推进不了”？",
+      "options": [
+        {
+          "id": "A",
+          "label": "逐部门单独协调",
+          "desc": "保持原有流程，通过更频繁沟通加速。",
+          "delta": {
+            "asset": 7,
+            "innovation": -5,
+            "collaboration": 2,
+            "openness": -3,
+            "public_value": -4
+          },
+          "condition_delta": {
+            "capital_resilience": 7,
+            "tenant_stability": 3,
+            "execution_capacity": 3,
+            "street_capacity": 2,
+            "public_trust": -4,
+            "spillover": -3
+          }
+        },
+        {
+          "id": "B",
+          "label": "建立事项清单 + 单一牵头接口 + 超时升级",
+          "desc": "为跨部门事项设负责人、节点和升级机制。",
+          "delta": {
+            "asset": 4,
+            "innovation": 5,
+            "collaboration": 16,
+            "openness": 5,
+            "public_value": 7
+          },
+          "condition_delta": {
+            "capital_resilience": 5,
+            "tenant_stability": 2,
+            "execution_capacity": 13,
+            "street_capacity": 3,
+            "public_trust": 7,
+            "spillover": 7
+          }
+        },
+        {
+          "id": "C",
+          "label": "由最高层临时拍板",
+          "desc": "快速解决当前项目，但不改变日常制度。",
+          "delta": {
+            "asset": -4,
+            "innovation": 11,
+            "collaboration": 5,
+            "openness": 5,
+            "public_value": 2
+          },
+          "condition_delta": {
+            "capital_resilience": -8,
+            "tenant_stability": -3,
+            "execution_capacity": 6,
+            "street_capacity": -6,
+            "public_trust": 1,
+            "spillover": 6
+          }
+        }
+      ],
+      "case_choice": null,
+      "case_result": "情景卡没有唯一“案例正确答案”。系统将结合你的选择、当前状态和五方协商继续推演。",
+      "source_section": "情景推演卡｜非案例事实",
+      "when": [],
+      "branch_note": "",
+      "event_type": "随机情景",
+      "special": true,
+      "random_weight": 1.0,
+      "stage_id": 8
+    },
+    {
+      "id": 43,
+      "chapter": "随机事件 · 协同机制",
+      "title": "数据共享与隐私边界争议：街区平台能收集到什么程度？",
+      "situation": "运营方希望汇总活动报名、空间使用和企业需求数据来提升服务，但公众和企业都担心用途扩大。",
+      "fact": "本卡为基于案例已识别矛盾设计的情景推演，不代表AI原点社区真实发生过该事件。",
+      "question": "街区数据治理怎么做？",
+      "options": [
+        {
+          "id": "A",
+          "label": "尽量多收集，先把数据能力做起来",
+          "desc": "用数据提升运营效率，后续再细化规则。",
+          "delta": {
+            "asset": -4,
+            "innovation": 9,
+            "collaboration": 3,
+            "openness": 5,
+            "public_value": 2
+          },
+          "condition_delta": {
+            "capital_resilience": -8,
+            "tenant_stability": -3,
+            "execution_capacity": -7,
+            "street_capacity": -6,
+            "public_trust": -13,
+            "spillover": 6
+          }
+        },
+        {
+          "id": "B",
+          "label": "最小必要数据 + 分级授权 + 明确删除周期",
+          "desc": "只收集服务必需信息，并给不同用途设置授权和留存规则。",
+          "delta": {
+            "asset": 2,
+            "innovation": 6,
+            "collaboration": 11,
+            "openness": 6,
+            "public_value": 12
+          },
+          "condition_delta": {
+            "capital_resilience": 0,
+            "tenant_stability": 2,
+            "execution_capacity": 1,
+            "street_capacity": 2,
+            "public_trust": 13,
+            "spillover": 5
+          }
+        },
+        {
+          "id": "C",
+          "label": "几乎不做跨主体数据共享",
+          "desc": "最大化降低隐私风险，但牺牲协同效率。",
+          "delta": {
+            "asset": 3,
+            "innovation": -7,
+            "collaboration": -5,
+            "openness": -7,
+            "public_value": -5
+          },
+          "condition_delta": {
+            "capital_resilience": 4,
+            "tenant_stability": 4,
+            "execution_capacity": 5,
+            "street_capacity": 7,
+            "public_trust": 5,
+            "spillover": -4
+          }
+        }
+      ],
+      "case_choice": null,
+      "case_result": "情景卡没有唯一“案例正确答案”。系统将结合你的选择、当前状态和五方协商继续推演。",
+      "source_section": "情景推演卡｜非案例事实",
+      "when": [],
+      "branch_note": "",
+      "event_type": "随机情景",
+      "special": true,
+      "random_weight": 1.0,
+      "stage_id": 8
+    },
+    {
+      "id": 44,
+      "chapter": "随机事件 · 资源扩散",
+      "title": "外围节点要求“同等资源”：核心资源要平均分吗？",
+      "situation": "外围园区认为自己也属于同一街区品牌，希望获得同等活动、导师、投资人和算力资源。",
+      "fact": "本卡为基于案例已识别矛盾设计的情景推演，不代表AI原点社区真实发生过该事件。",
+      "question": "资源扩散是平均分配还是差异配置？",
+      "options": [
+        {
+          "id": "A",
+          "label": "按节点平均分配",
+          "desc": "形式上公平，但可能稀释核心资源密度。",
+          "delta": {
+            "asset": -5,
+            "innovation": -4,
+            "collaboration": 7,
+            "openness": 13,
+            "public_value": 7
+          },
+          "condition_delta": {
+            "capital_resilience": -7,
+            "tenant_stability": 1,
+            "execution_capacity": -5,
+            "street_capacity": 2,
+            "public_trust": 13,
+            "spillover": 10
+          }
+        },
+        {
+          "id": "B",
+          "label": "基础资源普惠 + 稀缺资源按需求和项目匹配",
+          "desc": "保证入口公平，同时让高价值资源跟着需求流动。",
+          "delta": {
+            "asset": 0,
+            "innovation": 10,
+            "collaboration": 12,
+            "openness": 6,
+            "public_value": 12
+          },
+          "condition_delta": {
+            "capital_resilience": -2,
+            "tenant_stability": 1,
+            "execution_capacity": -3,
+            "street_capacity": -2,
+            "public_trust": 6,
+            "spillover": 14
+          }
+        },
+        {
+          "id": "C",
+          "label": "核心优先，外围等待自然外溢",
+          "desc": "保持核心效率和资源密度。",
+          "delta": {
+            "asset": 7,
+            "innovation": 8,
+            "collaboration": -3,
+            "openness": -3,
+            "public_value": -8
+          },
+          "condition_delta": {
+            "capital_resilience": 7,
+            "tenant_stability": 3,
+            "execution_capacity": 3,
+            "street_capacity": 2,
+            "public_trust": -4,
+            "spillover": -8
+          }
+        }
+      ],
+      "case_choice": null,
+      "case_result": "情景卡没有唯一“案例正确答案”。系统将结合你的选择、当前状态和五方协商继续推演。",
+      "source_section": "情景推演卡｜非案例事实",
+      "when": [
+        {
+          "path": "conditions.spillover",
+          "op": "lt",
+          "value": 70
+        }
+      ],
+      "branch_note": "资源外溢仍不均衡，触发“外围公平”卡。",
+      "event_type": "随机情景",
+      "special": true,
+      "random_weight": 1.3,
+      "stage_id": 9
+    },
+    {
+      "id": 45,
+      "chapter": "随机事件 · 资源扩散",
+      "title": "另一个节点提出差异化定位：同品牌下能不能“不一样”？",
+      "situation": "外围节点认为自身更适合机器人应用和社区服务，不希望照搬核心区的创业路演模式。",
+      "fact": "本卡为基于案例已识别矛盾设计的情景推演，不代表AI原点社区真实发生过该事件。",
+      "question": "是否允许节点形成不同功能？",
+      "options": [
+        {
+          "id": "A",
+          "label": "坚持统一模板",
+          "desc": "便于品牌管理和复制。",
+          "delta": {
+            "asset": 7,
+            "innovation": -5,
+            "collaboration": -4,
+            "openness": -3,
+            "public_value": -4
+          },
+          "condition_delta": {
+            "capital_resilience": 7,
+            "tenant_stability": 3,
+            "execution_capacity": 3,
+            "street_capacity": 2,
+            "public_trust": -4,
+            "spillover": -3
+          }
+        },
+        {
+          "id": "B",
+          "label": "统一公共原则，允许功能差异",
+          "desc": "统一开放、反馈和协同规则，但让节点按资源禀赋定位。",
+          "delta": {
+            "asset": 0,
+            "innovation": 10,
+            "collaboration": 14,
+            "openness": 6,
+            "public_value": 12
+          },
+          "condition_delta": {
+            "capital_resilience": -2,
+            "tenant_stability": 1,
+            "execution_capacity": -3,
+            "street_capacity": -2,
+            "public_trust": 6,
+            "spillover": 11
+          }
+        },
+        {
+          "id": "C",
+          "label": "完全独立发展",
+          "desc": "让各节点自主决定，不再要求共同规则。",
+          "delta": {
+            "asset": -4,
+            "innovation": 11,
+            "collaboration": -9,
+            "openness": 5,
+            "public_value": 2
+          },
+          "condition_delta": {
+            "capital_resilience": -8,
+            "tenant_stability": -3,
+            "execution_capacity": -7,
+            "street_capacity": -6,
+            "public_trust": 1,
+            "spillover": 2
+          }
+        }
+      ],
+      "case_choice": null,
+      "case_result": "情景卡没有唯一“案例正确答案”。系统将结合你的选择、当前状态和五方协商继续推演。",
+      "source_section": "情景推演卡｜非案例事实",
+      "when": [],
+      "branch_note": "",
+      "event_type": "随机情景",
+      "special": true,
+      "random_weight": 1.0,
+      "stage_id": 9
+    },
+    {
+      "id": 46,
+      "chapter": "随机事件 · 资源扩散",
+      "title": "核心企业不愿外派导师：知识外溢谁来买单？",
+      "situation": "外围节点希望核心企业定期提供导师和技术活动，但企业认为这是额外成本，且直接收益有限。",
+      "fact": "本卡为基于案例已识别矛盾设计的情景推演，不代表AI原点社区真实发生过该事件。",
+      "question": "如何让知识外溢可持续？",
+      "options": [
+        {
+          "id": "A",
+          "label": "行政式要求企业轮流承担",
+          "desc": "迅速形成供给，但企业参与意愿可能下降。",
+          "delta": {
+            "asset": 3,
+            "innovation": -3,
+            "collaboration": 4,
+            "openness": -7,
+            "public_value": -5
+          },
+          "condition_delta": {
+            "capital_resilience": 4,
+            "tenant_stability": 4,
+            "execution_capacity": 5,
+            "street_capacity": 7,
+            "public_trust": -6,
+            "spillover": -4
+          }
+        },
+        {
+          "id": "B",
+          "label": "建立贡献积分与资源交换",
+          "desc": "企业贡献导师、课程或场景，可换取展示、场地、对接等平台资源。",
+          "delta": {
+            "asset": 0,
+            "innovation": 10,
+            "collaboration": 13,
+            "openness": 6,
+            "public_value": 10
+          },
+          "condition_delta": {
+            "capital_resilience": -2,
+            "tenant_stability": 1,
+            "execution_capacity": -3,
+            "street_capacity": -2,
+            "public_trust": 6,
+            "spillover": 11
+          }
+        },
+        {
+          "id": "C",
+          "label": "由平台付费采购全部导师服务",
+          "desc": "保证供给质量，但增加长期成本。",
+          "delta": {
+            "asset": -5,
+            "innovation": 7,
+            "collaboration": 7,
+            "openness": 13,
+            "public_value": 14
+          },
+          "condition_delta": {
+            "capital_resilience": -10,
+            "tenant_stability": 1,
+            "execution_capacity": -5,
+            "street_capacity": 2,
+            "public_trust": 13,
+            "spillover": 5
+          }
+        }
+      ],
+      "case_choice": null,
+      "case_result": "情景卡没有唯一“案例正确答案”。系统将结合你的选择、当前状态和五方协商继续推演。",
+      "source_section": "情景推演卡｜非案例事实",
+      "when": [],
+      "branch_note": "",
+      "event_type": "随机情景",
+      "special": true,
+      "random_weight": 0.9,
+      "stage_id": 9
+    },
+    {
+      "id": 47,
+      "chapter": "随机事件 · 由点及面",
+      "title": "外地园区请求复制“原点模式”：你会输出什么？",
+      "situation": "一个外地园区希望快速复制项目，最关心空间设计、招商名单和运营活动模板。",
+      "fact": "本卡为基于案例已识别矛盾设计的情景推演，不代表AI原点社区真实发生过该事件。",
+      "question": "如果只能输出一套方法，你输出什么？",
+      "options": [
+        {
+          "id": "A",
+          "label": "输出空间装修与品牌模板",
+          "desc": "最容易看见、最快复制。",
+          "delta": {
+            "asset": 7,
+            "innovation": -5,
+            "collaboration": -3,
+            "openness": -3,
+            "public_value": -4
+          },
+          "condition_delta": {
+            "capital_resilience": 7,
+            "tenant_stability": 3,
+            "execution_capacity": 3,
+            "street_capacity": 2,
+            "public_trust": -4,
+            "spillover": -3
+          }
+        },
+        {
+          "id": "B",
+          "label": "输出问题识别—协商—试点—复盘机制",
+          "desc": "把治理过程作为核心产品，而不是照搬空间结果。",
+          "delta": {
+            "asset": 0,
+            "innovation": 10,
+            "collaboration": 15,
+            "openness": 6,
+            "public_value": 14
+          },
+          "condition_delta": {
+            "capital_resilience": -2,
+            "tenant_stability": 1,
+            "execution_capacity": -3,
+            "street_capacity": -2,
+            "public_trust": 6,
+            "spillover": 15
+          }
+        },
+        {
+          "id": "C",
+          "label": "输出招商和企业优惠工具包",
+          "desc": "优先复制产业集聚手段。",
+          "delta": {
+            "asset": -4,
+            "innovation": 13,
+            "collaboration": 3,
+            "openness": 5,
+            "public_value": -5
+          },
+          "condition_delta": {
+            "capital_resilience": -8,
+            "tenant_stability": -3,
+            "execution_capacity": -7,
+            "street_capacity": -6,
+            "public_trust": 1,
+            "spillover": 6
+          }
+        }
+      ],
+      "case_choice": null,
+      "case_result": "情景卡没有唯一“案例正确答案”。系统将结合你的选择、当前状态和五方协商继续推演。",
+      "source_section": "情景推演卡｜非案例事实",
+      "when": [],
+      "branch_note": "",
+      "event_type": "随机情景",
+      "special": true,
+      "random_weight": 1.2,
+      "stage_id": 10
+    },
+    {
+      "id": 48,
+      "chapter": "随机事件 · 由点及面",
+      "title": "“两区一带”品牌归属争议：谁代表整体发声？",
+      "situation": "多个节点都希望在对外宣传、活动主办和资源申请中拥有更高品牌话语权。",
+      "fact": "本卡为基于案例已识别矛盾设计的情景推演，不代表AI原点社区真实发生过该事件。",
+      "question": "共同品牌如何治理？",
+      "options": [
+        {
+          "id": "A",
+          "label": "核心区统一对外",
+          "desc": "保持口径一致，但外围参与感较弱。",
+          "delta": {
+            "asset": 7,
+            "innovation": -5,
+            "collaboration": -4,
+            "openness": -3,
+            "public_value": -4
+          },
+          "condition_delta": {
+            "capital_resilience": 7,
+            "tenant_stability": 3,
+            "execution_capacity": 3,
+            "street_capacity": 2,
+            "public_trust": -4,
+            "spillover": -3
+          }
+        },
+        {
+          "id": "B",
+          "label": "共同品牌委员会 + 节点轮值",
+          "desc": "重大规则共同制定，日常活动允许节点轮值主办。",
+          "delta": {
+            "asset": 4,
+            "innovation": 5,
+            "collaboration": 16,
+            "openness": 5,
+            "public_value": 10
+          },
+          "condition_delta": {
+            "capital_resilience": 5,
+            "tenant_stability": 2,
+            "execution_capacity": 8,
+            "street_capacity": 3,
+            "public_trust": 7,
+            "spillover": 7
+          }
+        },
+        {
+          "id": "C",
+          "label": "各节点独立品牌",
+          "desc": "减少协调，但整体网络识别度下降。",
+          "delta": {
+            "asset": -4,
+            "innovation": 11,
+            "collaboration": -10,
+            "openness": 5,
+            "public_value": 2
+          },
+          "condition_delta": {
+            "capital_resilience": -8,
+            "tenant_stability": -3,
+            "execution_capacity": -7,
+            "street_capacity": -6,
+            "public_trust": 1,
+            "spillover": -6
+          }
+        }
+      ],
+      "case_choice": null,
+      "case_result": "情景卡没有唯一“案例正确答案”。系统将结合你的选择、当前状态和五方协商继续推演。",
+      "source_section": "情景推演卡｜非案例事实",
+      "when": [],
+      "branch_note": "",
+      "event_type": "随机情景",
+      "special": true,
+      "random_weight": 1.0,
+      "stage_id": 10
+    },
+    {
+      "id": 49,
+      "chapter": "随机事件 · 由点及面",
+      "title": "核心负责人变动：机制能否离开“关键人物”？",
+      "situation": "长期推动项目的核心协调者岗位调整，新负责人需要快速接手复杂的主体关系和历史承诺。",
+      "fact": "本卡为基于案例已识别矛盾设计的情景推演，不代表AI原点社区真实发生过该事件。",
+      "question": "如何降低对个人协调能力的依赖？",
+      "options": [
+        {
+          "id": "A",
+          "label": "由新负责人继续靠个人协调",
+          "desc": "保持灵活，但知识和关系高度依赖个人。",
+          "delta": {
+            "asset": 7,
+            "innovation": -5,
+            "collaboration": -3,
+            "openness": -3,
+            "public_value": -4
+          },
+          "condition_delta": {
+            "capital_resilience": 7,
+            "tenant_stability": 3,
+            "execution_capacity": -5,
+            "street_capacity": 2,
+            "public_trust": -4,
+            "spillover": -3
+          }
+        },
+        {
+          "id": "B",
+          "label": "把承诺、协议、责任和复盘机制制度化",
+          "desc": "建立可交接的治理账本和固定协商机制。",
+          "delta": {
+            "asset": 4,
+            "innovation": 5,
+            "collaboration": 17,
+            "openness": 5,
+            "public_value": 11
+          },
+          "condition_delta": {
+            "capital_resilience": 5,
+            "tenant_stability": 2,
+            "execution_capacity": 12,
+            "street_capacity": 3,
+            "public_trust": 7,
+            "spillover": 7
+          }
+        },
+        {
+          "id": "C",
+          "label": "重新集中权力，减少协商环节",
+          "desc": "用更强指挥链提高短期速度。",
+          "delta": {
+            "asset": 3,
+            "innovation": -3,
+            "collaboration": -7,
+            "openness": -7,
+            "public_value": -4
+          },
+          "condition_delta": {
+            "capital_resilience": 4,
+            "tenant_stability": 4,
+            "execution_capacity": 7,
+            "street_capacity": 7,
+            "public_trust": -6,
+            "spillover": -4
+          }
+        }
+      ],
+      "case_choice": null,
+      "case_result": "情景卡没有唯一“案例正确答案”。系统将结合你的选择、当前状态和五方协商继续推演。",
+      "source_section": "情景推演卡｜非案例事实",
+      "when": [],
+      "branch_note": "",
+      "event_type": "随机情景",
+      "special": true,
+      "random_weight": 1.0,
+      "stage_id": 10
+    },
+    {
+      "id": 50,
+      "chapter": "随机事件 · 由点及面",
+      "title": "三年后绩效评估：到底什么算“成功”？",
+      "situation": "如果未来只能用一套指标评价街区，租金、企业数量、合作网络、公共空间使用和居民体验会给出不同答案。",
+      "fact": "本卡为基于案例已识别矛盾设计的情景推演，不代表AI原点社区真实发生过该事件。",
+      "question": "你会如何定义项目成功？",
+      "options": [
+        {
+          "id": "A",
+          "label": "以资产收益和出租率为主",
+          "desc": "指标清晰、易核算，但可能忽略产业和公共价值。",
+          "delta": {
+            "asset": 12,
+            "innovation": -5,
+            "collaboration": -3,
+            "openness": -3,
+            "public_value": -7
+          },
+          "condition_delta": {
+            "capital_resilience": 7,
+            "tenant_stability": 3,
+            "execution_capacity": 3,
+            "street_capacity": 2,
+            "public_trust": -4,
+            "spillover": -3
+          }
+        },
+        {
+          "id": "B",
+          "label": "建立资产—创新—协同—开放—公众多维评价",
+          "desc": "允许不同价值同时进入年度复盘，并关注运行条件。",
+          "delta": {
+            "asset": 2,
+            "innovation": 6,
+            "collaboration": 14,
+            "openness": 6,
+            "public_value": 15
+          },
+          "condition_delta": {
+            "capital_resilience": 0,
+            "tenant_stability": 2,
+            "execution_capacity": 1,
+            "street_capacity": 2,
+            "public_trust": 6,
+            "spillover": 5
+          }
+        },
+        {
+          "id": "C",
+          "label": "以企业数量和产业规模为主",
+          "desc": "突出创新集聚，但公共空间与公众体验权重较低。",
+          "delta": {
+            "asset": -4,
+            "innovation": 15,
+            "collaboration": 3,
+            "openness": 5,
+            "public_value": -6
+          },
+          "condition_delta": {
+            "capital_resilience": -8,
+            "tenant_stability": -3,
+            "execution_capacity": -7,
+            "street_capacity": -6,
+            "public_trust": 1,
+            "spillover": 6
+          }
+        }
+      ],
+      "case_choice": null,
+      "case_result": "情景卡没有唯一“案例正确答案”。系统将结合你的选择、当前状态和五方协商继续推演。",
+      "source_section": "情景推演卡｜非案例事实",
+      "when": [],
+      "branch_note": "",
+      "event_type": "随机情景",
+      "special": true,
+      "random_weight": 1.2,
+      "stage_id": 10
+    }
+  ],
+  "random_engine": {
+    "description": "每局开始时用当前毫秒时间生成随机种子。每个阶段使用“种子 + 阶段编号”产生可复现的随机数，在满足状态条件的候选卡中进行加权抽取。",
+    "special_base_chance": 0.62,
+    "note": "随机种子只决定模拟事件组合，不代表真实世界概率。重新开始会产生新种子。"
+  },
+  "gallery": [
+    {
+      "id": "img1",
+      "title": "AI原点社区现场标识",
+      "image": "/static/images/gallery_ai_sign.png",
+      "caption": "官方报道中的“AI在社区”标识，直观呈现AI原点社区的空间品牌化表达。",
+      "source_title": "北京市科学技术委员会｜了不起的中关村｜创新，从“原点”生长",
+      "source_url": "https://kw.beijing.gov.cn/ztzl/rdzt/kjrmt/202509/t20250915_4202317.html",
+      "source_kind": "官方公开图片",
+      "summary": "该图可用于说明案例并不是抽象概念，而是已经被塑造成具有明确空间识别度的创新街区。"
+    },
+    {
+      "id": "img2",
+      "title": "机器人饮品站",
+      "image": "/static/images/gallery_robo_coffee.png",
+      "caption": "AI小巷中的机器人饮品站，体现了社区把技术应用嵌入日常生活场景的思路。",
+      "source_title": "北京市科学技术委员会｜了不起的中关村｜创新，从“原点”生长",
+      "source_url": "https://kw.beijing.gov.cn/ztzl/rdzt/kjrmt/202509/t20250915_4202317.html",
+      "source_kind": "官方公开图片",
+      "summary": "适合支持“创新与生活交织”的论点，说明该社区不仅服务企业，也在塑造生活化体验。"
+    },
+    {
+      "id": "img3",
+      "title": "原点bar交流空间",
+      "image": "/static/images/gallery_origin_bar.png",
+      "caption": "原点bar日咖夜酒式交流空间，体现社区在正式办公之外营造非正式交往与连接场景。",
+      "source_title": "北京市科学技术委员会｜了不起的中关村｜创新，从“原点”生长",
+      "source_url": "https://kw.beijing.gov.cn/ztzl/rdzt/kjrmt/202509/t20250915_4202317.html",
+      "source_kind": "官方公开图片",
+      "summary": "可用来解释为什么案例中的公共价值不只是“开放空间”，还包括促进交往、合作与创新网络。"
+    },
+    {
+      "id": "img4",
+      "title": "原点大厦（原东升大厦）外立面",
+      "image": "/static/images/gallery_origin_building.png",
+      "caption": "原东升大厦更新后成为AI原点社区的重要物理核心，显示存量楼宇更新与产业场景植入的结合。",
+      "source_title": "北京市科学技术委员会｜了不起的中关村｜创新，从“原点”生长",
+      "source_url": "https://kw.beijing.gov.cn/ztzl/rdzt/kjrmt/202509/t20250915_4202317.html",
+      "source_kind": "官方公开图片",
+      "summary": "这张图能帮助评审快速理解：本案例的基本载体是既有楼宇更新，而不是新建园区。"
+    },
+    {
+      "id": "img5",
+      "title": "人形机器人实验展示场景",
+      "image": "/static/images/gallery_robot_lab.png",
+      "caption": "官方报道中的机器人训练与展示场景，反映社区与AI企业、实验平台之间的真实联系。",
+      "source_title": "北京市科学技术委员会｜了不起的中关村｜创新，从“原点”生长",
+      "source_url": "https://kw.beijing.gov.cn/ztzl/rdzt/kjrmt/202509/t20250915_4202317.html",
+      "source_kind": "官方公开图片",
+      "summary": "可用于说明“技术策源—展示体验—产业孵化”并不是口号，而是被嵌入社区空间中的。"
+    },
+    {
+      "id": "img6",
+      "title": "AI原点社区实体标识与街区入口",
+      "image": "https://static.bjd.com.cn/dams-res/mps/image/202603/24/69c22d05d5de1a2dcc80ff15.jpg",
+      "caption": "街区入口与“AI原点社区”实体标识，可用于说明原点社区已经形成具有明确空间识别度的创新街区形象。",
+      "source_title": "北京AI原点社区，全球AI人才创新创业的“第一站”",
+      "source_url": "https://peking.bjd.com.cn/content/s69c23cfae4b0687a2892fb5d.html",
+      "source_kind": "北京日报/北京号公开图片 · 联网加载",
+      "summary": "适合放在案例概况部分，帮助评审快速建立“真实空间场景”的直观认知。"
+    },
+    {
+      "id": "img7",
+      "title": "原点社区更新效果示意图",
+      "image": "https://static.bjd.com.cn/dams-res/mps/image/202603/24/69c22d05d5debee3dfa7bf55.png",
+      "caption": "原点社区东升产业空间更新效果示意，展示存量楼宇与街区公共空间一体化塑造的构想。",
+      "source_title": "北京AI原点社区，全球AI人才创新创业的“第一站”",
+      "source_url": "https://peking.bjd.com.cn/content/s69c23cfae4b0687a2892fb5d.html",
+      "source_kind": "北京日报/北京号公开图片 · 联网加载",
+      "summary": "可用于解释“从单体楼宇更新走向街区更新”的空间尺度变化。"
+    },
+    {
+      "id": "img8",
+      "title": "青年友好·点燃计划活动现场",
+      "image": "https://static.bjd.com.cn/dams-res/editing/image/202412/30/m2w6zhzxq4nvocufaabm1wez_m.jpg",
+      "caption": "点燃计划中的机器人展示与青年活动现场，体现AI原点社区把科创、文化、社交与公众体验放在同一街区中组织。",
+      "source_title": "海淀AI原点社区“点燃计划”开启，助力年轻人创新创业",
+      "source_url": "https://xinwen.bjd.com.cn/content/s6772a30ae4b06b0a5624e85d.html",
+      "source_kind": "海淀AI原点社区供图/北京日报 · 联网加载",
+      "summary": "适合支撑“青年友好、交往友好、成长友好”的社区运营逻辑。"
+    },
+    {
+      "id": "img9",
+      "title": "原点学堂开放式创业工位",
+      "image": "https://static.bjd.com.cn/dams-res/mps/image/202603/24/69c22d07d5debee3dfa7bf58.jpg",
+      "caption": "原点学堂中的开放式创业办公场景，体现从“出租面积”向“创业服务与网络连接空间”的功能重构。",
+      "source_title": "北京AI原点社区，全球AI人才创新创业的“第一站”",
+      "source_url": "https://peking.bjd.com.cn/content/s69c23cfae4b0687a2892fb5d.html",
+      "source_kind": "北京日报/北京号公开图片 · 联网加载",
+      "summary": "可用于解释低成本工位、青年创业和资源连接之间的关系。"
+    },
+    {
+      "id": "img10",
+      "title": "大模型生态服务站",
+      "image": "https://static.bjd.com.cn/dams-res/mps/image/202603/24/69c22d07d5de1a2dcc80ff18.jpg",
+      "caption": "海淀人工智能创新街区大模型生态服务站场景，呈现政策、资金、算力、人才、伙伴、智力、空间、场景等服务的线下接口。",
+      "source_title": "北京AI原点社区，全球AI人才创新创业的“第一站”",
+      "source_url": "https://peking.bjd.com.cn/content/s69c23cfae4b0687a2892fb5d.html",
+      "source_kind": "北京日报/北京号公开图片 · 联网加载",
+      "summary": "适合支撑“平台居中”“资源接口”与多主体协同服务部分。"
+    },
+    {
+      "id": "img11",
+      "title": "AI原点社区约3平方公里空间结构示意",
+      "image": "https://static.bjd.com.cn/dams-res/mps/image/202603/24/69c22d09d5debee3dfa7bf5b.png",
+      "caption": "覆盖约3平方公里的空间结构示意图，标出高校、科研、产业载体与周边节点，有助于理解“核心楼宇—街区—更大创新带”的扩展逻辑。",
+      "source_title": "北京AI原点社区，全球AI人才创新创业的“第一站”",
+      "source_url": "https://peking.bjd.com.cn/content/s69c23cfae4b0687a2892fb5d.html",
+      "source_kind": "北京日报/北京号公开图片 · 联网加载",
+      "summary": "适合支撑“三公里同名”“资源外溢”和空间尺度扩围分析。"
+    },
+    {
+      "id": "img12",
+      "title": "公共空间整治后的步行与非机动车环境",
+      "image": "https://static.bjd.com.cn/dams-res/mps/image/202606/10/6a290281d5de2b4209049545.jpg",
+      "caption": "2026年周边环境整治后的街道实景，步行空间与非机动车停放边界更加清楚。",
+      "source_title": "停车有序、步行通畅、绿化提靓！海淀这一创新街区，焕新亮相",
+      "source_url": "https://xinwen.bjd.com.cn/content/s6a291622d5de3eb734f4ad5d.html",
+      "source_kind": "北京海淀官方发布/北京日报 · 联网加载",
+      "summary": "可直接支撑案例后半段“人流漫出楼宇—公共空间承压—联合整治”的治理链条。"
+    },
+    {
+      "id": "img13",
+      "title": "开放后的街区前场公共空间",
+      "image": "https://static.bjd.com.cn/dams-res/mps/image/202606/10/6a290283d5de2b4209049548.jpg",
+      "caption": "整治后的开放广场与街区前场空间，体现原本割裂的建筑前区逐步承担通行、停留和公共交往功能。",
+      "source_title": "停车有序、步行通畅、绿化提靓！海淀这一创新街区，焕新亮相",
+      "source_url": "https://xinwen.bjd.com.cn/content/s6a291622d5de3eb734f4ad5d.html",
+      "source_kind": "北京海淀官方发布/北京日报 · 联网加载",
+      "summary": "适合支撑“产权空间接入城市通行”“围墙后退”与公共价值可感知化。"
+    },
+    {
+      "id": "img14",
+      "title": "街区慢行与绿化提升实景",
+      "image": "https://static.bjd.com.cn/dams-res/mps/image/202606/10/6a290285d5de7dbdbb61aa66.jpg",
+      "caption": "街区慢行与绿化提升后的实景，展示创新街区同时回应日常步行、停留和环境品质的治理目标。",
+      "source_title": "停车有序、步行通畅、绿化提靓！海淀这一创新街区，焕新亮相",
+      "source_url": "https://xinwen.bjd.com.cn/content/s6a291622d5de3eb734f4ad5d.html",
+      "source_kind": "北京海淀官方发布/北京日报 · 联网加载",
+      "summary": "可用于说明公共空间治理最终如何转化为可日常使用的城市生活成果。"
+    }
+  ],
+  "case_briefs": [
+    {
+      "title": "案例是什么",
+      "text": "AI原点社区是海淀人工智能创新街区的核心载体，围绕原点大厦（原东升大厦）及周边空间，尝试把存量楼宇更新、AI产业集聚、人才服务和公共生活场景结合在一起。它不是单一楼宇运营问题，而是“街区—校区—园区”联动的复合治理问题。",
+      "source": "团队案例材料 + 海淀区信息公开大厅",
+      "keywords": [
+        "是什么",
+        "定位",
+        "AI原点社区",
+        "案例简介"
+      ]
+    },
+    {
+      "title": "为什么具有城市更新属性",
+      "text": "该案例依托的是既有存量空间的功能重塑，而不是全新开发建设。其关注点包括老旧楼宇提质增效、空间功能重新配置、公共场景植入、多主体协同实施等，和北京市城市更新条例中“产业类更新”“公共空间类更新”“区域综合性更新”的逻辑高度契合。",
+      "source": "团队案例材料 + 北京市城市更新条例",
+      "keywords": [
+        "城市更新",
+        "为什么是城市更新",
+        "存量空间",
+        "楼宇更新"
+      ]
+    },
+    {
+      "title": "核心矛盾在哪里",
+      "text": "最核心的矛盾不是“要不要发展AI”，而是如何在核心地段的高价值空间中，同时容纳产业孵化、企业服务、公共开放、居民感受和长期资产回报。也就是说，创新效率、资产收益、执行成本和公众可及性之间存在持续张力。",
+      "source": "团队案例材料",
+      "keywords": [
+        "核心矛盾",
+        "冲突",
+        "难点"
+      ]
+    },
+    {
+      "title": "为什么必须多主体共治",
+      "text": "政府关心公共目标与制度协调，集体经济组织关心资产和现金流，运营方关心现场执行和容量，企业关心资源密度与试错效率，公众关心通行、安全、开放和反馈是否有效。任何单一主体都无法独立解决这些冲突，因此案例天然需要共治与协商机制。",
+      "source": "团队案例材料",
+      "keywords": [
+        "多主体",
+        "共治",
+        "协同治理"
+      ]
+    },
+    {
+      "title": "报告的创新点",
+      "text": "你的产品并没有把案例简化为“选正确答案”，而是把它做成一个可重复推演的治理实验：评委不仅能看最终选项，还能看到随机事件、五方长期记忆、群聊质询、最终关注雷达和治理因果网络，从而直观看到不同方案背后的权衡逻辑。",
+      "source": "产品说明",
+      "keywords": [
+        "创新点",
+        "作品创新",
+        "沙盘特色"
+      ]
+    },
+    {
+      "title": "为什么要增加独立问答助手",
+      "text": "模拟沙盘更适合体验“决策—协商—反馈”过程，但评委往往还需要快速追问案例事实、政策背景、理论依据和方案逻辑。独立问答助手就像讲解员，帮助评委在不进入推演的情况下，单独理解案例、政策和作品设计。",
+      "source": "产品设计说明",
+      "keywords": [
+        "问答助手",
+        "为什么做问答",
+        "评审"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "title": "团队案例分析报告（内部材料）",
+      "kind": "团队报告",
+      "url": "",
+      "summary": "提供案例主线、关键事件、主体关系和作品拟回应的核心问题，是本产品的第一信息源。",
+      "key_points": [
+        "案例围绕AI原点社区及其空间治理展开",
+        "重点关注公共价值、多主体关系与治理机制",
+        "产品中的事件主线首先来自团队案例材料"
+      ]
+    },
+    {
+      "title": "AI原点社区入选北京首批AI创新街区",
+      "kind": "官方公开资料",
+      "url": "https://zyk.bjhd.gov.cn/jbdt/auto4510_51816/auto4510_54705/auto4510/auto4510/202601/t20260105_4799909.shtml",
+      "summary": "海淀区官方信息公开文章，给出了AI原点社区的空间范围、人才密度、产业集聚和总体定位。",
+      "key_points": [
+        "辐射周边约3平方公里",
+        "30多所高校和科研机构、超过1000位AI科学家、1.3万名开发者、10万相关专业学子",
+        "东升产业空间总建筑面积13.89万平方米、集聚400多家企业、AI相关专利商标超过2000项"
+      ]
+    },
+    {
+      "title": "了不起的中关村｜创新，从“原点”生长",
+      "kind": "官方公开资料",
+      "url": "https://kw.beijing.gov.cn/ztzl/rdzt/kjrmt/202509/t20250915_4202317.html",
+      "summary": "北京市科委的图文报道，展示了AI小巷、原点大厦、共享实验室、机器人咖啡、交流空间等具象场景。",
+      "key_points": [
+        "AI原点社区约16万平方米",
+        "以AI小巷串联东升大厦、展示中心、共享实验室、东升会客厅等空间",
+        "突出创新与生活交织的场景化表达"
+      ]
+    },
+    {
+      "title": "北京市城市更新条例",
+      "kind": "政策法规",
+      "url": "https://www.beijing.gov.cn/zhengce/dfxfg/202212/t20221206_2871600.html",
+      "summary": "北京市关于城市更新的基础性法规，为理解该案例为何属于城市更新而不只是园区招商提供制度依据。",
+      "key_points": [
+        "城市更新包括产业类、公共空间类和区域综合性更新",
+        "强调以人民为中心、科技赋能、绿色发展、多元参与、共建共享",
+        "强调存量空间持续完善和优化调整，而不是大拆大建"
+      ]
+    },
+    {
+      "title": "北京市城市更新行动计划（2021-2025年）",
+      "kind": "政策文件",
+      "url": "https://www.beijing.gov.cn/zhengce/zhengcefagui/202108/t20210831_2480185.html",
+      "summary": "从行动层面明确北京城市更新要聚焦建成区存量空间提质增效，并强调多元参与、共治共享。",
+      "key_points": [
+        "聚焦建成区存量空间资源提质增效",
+        "原则上不搞大拆大建",
+        "鼓励多元平等协商共治机制"
+      ]
+    },
+    {
+      "title": "北京人工智能创新高地建设行动计划（公开报道）",
+      "kind": "政策背景",
+      "url": "https://www.ncsti.gov.cn/kjdt/lbt/202601/t20260106_234435.html",
+      "summary": "从更大的政策环境解释为什么AI原点社区会被赋予“创新高地”“场景试验田”等角色。",
+      "key_points": [
+        "北京提出用两年左右时间实现人工智能核心产业规模突破万亿元",
+        "部署技术创新策源、智算生态、高质量数据、全域应用赋能等九项行动",
+        "说明AI原点社区并非孤立项目，而是在更大的AI创新战略中被赋予使命"
+      ]
+    },
+    {
+      "title": "停车有序、步行通畅、绿化提靓！海淀这一创新街区，焕新亮相",
+      "kind": "案例官方报道",
+      "url": "https://xinwen.bjd.com.cn/content/s6a291622d5de3eb734f4ad5d.html",
+      "summary": "2026年6月北京AI原点社区周边公共空间整治报道，系统记录了停车、步行、绿化和产权内部空间开放等更新结果。",
+      "key_points": [
+        "约1.7万平方米公共空间完成系统整治",
+        "拆除围墙围栏270米并释放约4700平方米产权内部空间",
+        "新增16处非机动车停放区域、规范1080个停车位",
+        "新建及修复871米人行步道，打通多个步行断点"
+      ]
+    },
+    {
+      "title": "北京AI原点社区，全球AI人才创新创业的“第一站”",
+      "kind": "案例深度报道",
+      "url": "https://www.bjhd.gov.cn/ztzx/2025/aifuture/jq/aiyd/202603/t20260326_4809740.shtml",
+      "summary": "海淀官方对原点学堂、创业服务、产业链、融资对接和生活配套的系统梳理，可作为案例事实补充材料。",
+      "key_points": [
+        "原点学堂设置50个开放式工位并提供创业服务",
+        "大模型生态服务站提供政策、资金、算力、人才、空间、场景等服务接口",
+        "强调“上下楼就是产业链上下游”的高密度创新生态",
+        "将创业支持与青年生活服务结合起来"
+      ]
+    },
+    {
+      "title": "创新型产业社区怎么建",
+      "kind": "政策与实践观察",
+      "url": "https://paper.people.com.cn/zgcsb/pad/content/202603/30/content_30148171.html",
+      "summary": "以北京AI原点社区等为例讨论创新型产业社区从“划地招商”走向“生态育商”的实践逻辑。",
+      "key_points": [
+        "强调创新型产业社区是创新要素自主链接、自发生长的有机系统",
+        "关注企业服务、真实场景、人才与生活配套的综合生态",
+        "可用于扩展作品对“产业社区”概念的解释"
+      ]
+    },
+    {
+      "title": "The Rise of Innovation Districts: A New Geography of Innovation in America",
+      "kind": "创新街区经典研究",
+      "url": "https://www.brookings.edu/wp-content/uploads/2016/07/InnovationDistricts1.pdf",
+      "summary": "Bruce Katz 与 Julie Wagner 的创新街区经典报告，强调创新机构、企业、创业者在紧凑、可步行、交通可达的城市空间中高密度集聚与连接。",
+      "key_points": [
+        "创新区强调锚定机构、企业、初创公司和孵化器的空间邻近与连接",
+        "创新生态不仅依赖经济资产，也依赖物理空间和网络关系",
+        "可用于解释原点社区“近校、高密度、交往空间”的意义"
+      ],
+      "citation": "Katz, B., & Wagner, J. (2014). The Rise of Innovation Districts: A New Geography of Innovation in America. Brookings Institution."
+    },
+    {
+      "title": "Collaborative Governance in Theory and Practice",
+      "kind": "协同治理经典文献",
+      "url": "https://academic.oup.com/jpart/article/18/4/543/1090370",
+      "summary": "Chris Ansell 与 Alison Gash（2008）提出协同治理的经典分析框架，关注初始条件、制度设计、促进型领导与面对面协商过程。",
+      "key_points": [
+        "协同治理依赖面对面互动、信任形成、共同理解与阶段性成果",
+        "初始权力/资源不对称会影响协同过程",
+        "可为五主体群聊、条件交换和跨轮记忆设计提供理论依据"
+      ],
+      "citation": "Ansell, C., & Gash, A. (2008). Collaborative Governance in Theory and Practice. Journal of Public Administration Research and Theory, 18(4), 543–571. https://doi.org/10.1093/jopart/mum032"
+    },
+    {
+      "title": "Public Value Governance: Moving Beyond Traditional Public Administration and the New Public Management",
+      "kind": "公共价值经典文献",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/puar.12238",
+      "summary": "John M. Bryson、Barbara C. Crosby 与 Laura Bloomberg（2014）讨论网络化、多部门情境下的公共价值治理，强调政府、企业、公民和非营利主体共同参与公共问题解决。",
+      "key_points": [
+        "公共价值不只包括效率和效果，也包括民主与社会价值",
+        "政府承担保障公共价值的重要角色，但并非唯一行动者",
+        "与本案例多主体价值识别与协商高度相关"
+      ],
+      "citation": "Bryson, J. M., Crosby, B. C., & Bloomberg, L. (2014). Public Value Governance: Moving Beyond Traditional Public Administration and the New Public Management. Public Administration Review, 74(4), 445–456. https://doi.org/10.1111/puar.12238"
+    },
+    {
+      "title": "Collaborative workshop and community participation: A new approach to urban regeneration in China",
+      "kind": "城市更新学术文献",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0264275119300885",
+      "summary": "Xun Li 等（2020）研究中国城市更新中的协作工作坊与社区参与，强调公众参与、政府引导与专业协调对更新过程的重要性。",
+      "key_points": [
+        "中国城市发展从增量扩张逐步进入存量更新阶段",
+        "公众参与是城市更新的重要环节",
+        "第三方与专业规划者可承担协调和能力建设角色"
+      ],
+      "citation": "Li, X., Zhang, F., Hui, E. C.-M., & Lang, W. (2020). Collaborative workshop and community participation: A new approach to urban regeneration in China. Cities, 102, 102743. https://doi.org/10.1016/j.cities.2020.102743"
+    },
+    {
+      "title": "State-led versus market-led: How institutional arrangements impact collaborative governance in participatory urban regeneration in China",
+      "kind": "城市更新学术文献",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0197397524001346",
+      "summary": "Xiang Li、Bin Li、Wen Jiang（2024）比较不同制度安排如何影响参与式城市更新中的协同治理形成。",
+      "key_points": [
+        "制度规则会塑造主体间关系、责任与资源配置",
+        "产权、路径依赖和制度确定性会影响协同效果",
+        "可用于理解原点社区中集体资产、政府统筹与运营主体之间的关系"
+      ],
+      "citation": "Li, X., Li, B., & Jiang, W. (2024). State-led versus market-led: How institutional arrangements impact collaborative governance in participatory urban regeneration in China. Habitat International, 150, 103134. https://doi.org/10.1016/j.habitatint.2024.103134"
+    },
+    {
+      "title": "How is the collaborative process developed at the grassroots? Evidence from a party-led urban regeneration project in China",
+      "kind": "协同治理前沿研究",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0264275126003835",
+      "summary": "Chong Zhang、Liao Liao、Xinyu Liu、Haobing Hu（2026）把基层协作描述为不确定环境下动态、试错式形成的过程，并关注正式与非正式协调机制。",
+      "key_points": [
+        "基层协同是动态试错过程，而非一次性达成共识",
+        "非正式互动有助于早期纳入主体，半正式机制有助于持续协作",
+        "与本作品“多轮协商+跨轮记忆+条件交换”的设计相呼应"
+      ],
+      "citation": "Zhang, C., Liao, L., Liu, X., & Hu, H. (2026). How is the collaborative process developed at the grassroots? Evidence from a party-led urban regeneration project in China. Cities, 175, 107151. https://doi.org/10.1016/j.cities.2026.107151"
+    },
+    {
+      "title": "Participatory micro-regeneration: governing urban redevelopment in Qinghe, Beijing",
+      "kind": "北京城市更新案例研究",
+      "url": "https://www.tandfonline.com/doi/full/10.1080/02723638.2024.2349449",
+      "summary": "研究北京清河参与式微更新中居民委员会、社会组织、社区规划师与居民共同参与的治理实践，并讨论参与机制中的张力。",
+      "key_points": [
+        "公共空间更新可以成为社会参与和治理实验的载体",
+        "多主体参与仍会面临权力结构、能力差异与持续性问题",
+        "可作为原点社区公众参与和空间公共性讨论的北京本地对照"
+      ],
+      "citation": "Wang, Y., Wu, F., & Zhang, F. (2025). Participatory micro-regeneration: governing urban redevelopment in Qinghe, Beijing. Urban Geography, 46(1), 21–42. https://doi.org/10.1080/02723638.2024.2349449"
+    },
+    {
+      "title": "Shifts in governance modes in urban redevelopment: A case study of Beijing’s Jiuxianqiao Area",
+      "kind": "北京城市更新案例研究",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0264275116300014",
+      "summary": "Lei Zhang、Jing Chen、Rachel M. Tochen（2016）研究北京酒仙桥城市再开发中的治理模式变化，关注国家、地方与社会主体关系的调整。",
+      "key_points": [
+        "城市再开发中的治理联盟会随冲突和制度环境变化",
+        "国家内部并非单一行动者，社会主体也会形成多样化诉求",
+        "可用于扩展多主体治理与制度边界的讨论"
+      ],
+      "citation": "Zhang, L., Chen, J., & Tochen, R. M. (2016). Shifts in governance modes in urban redevelopment: A case study of Beijing’s Jiuxianqiao Area. Cities, 53, 61–69. https://doi.org/10.1016/j.cities.2016.01.001"
+    }
+  ],
+  "qa_prompts": [
+    "AI原点社区为什么说是城市更新案例，而不只是AI产业园招商？",
+    "这个案例最核心的治理矛盾是什么？",
+    "为什么你的作品要设计五个主体，而不是只看政府和企业？",
+    "AI原点社区中的“公共价值”具体体现在哪里？",
+    "独立问答助手与模拟沙盘分别适合解决什么问题？",
+    "如果评审追问政策依据，这个案例最关键的几份资料是什么？",
+    "从创新街区理论看，AI原点社区为什么强调“近校”和步行可达？",
+    "公共空间整治为什么会成为AI创新街区的治理问题？",
+    "协同治理理论如何解释五个主体反复质询和条件交换？",
+    "公共价值治理理论如何解释企业效率与居民获得感之间的关系？",
+    "有哪些国内外文献可以支撑这个案例分析框架？"
+  ],
+  "modes": {
+    "normal": {
+      "name": "普通模式",
+      "badge": "推荐答辩",
+      "desc": "仅使用15张原有案例卡，不抽取35张随机特殊事件。前序选择仍会影响后续进入哪一张真实案例分支。",
+      "event_pool": "15张案例卡",
+      "random_special": false
+    },
+    "free": {
+      "name": "自由模式",
+      "badge": "开放推演",
+      "desc": "启用完整50张事件卡、时间随机种子、状态触发与35张特殊事件，更适合展示复杂情景和重复实验。",
+      "event_pool": "50张事件卡",
+      "random_special": true
+    }
+  },
+  "report_sections": [
+    {
+      "title": "一、旧困：商超退潮，旧楼失去旧答案",
+      "text": "商超退场：一万余平方米空间失去旧答案\n东升大厦位于中关村东路8号，与清华科技园隔路相望。过去，裙房主要经营商超、餐饮等配套商业，塔楼以办公出租为主。随着电商、即时零售和社区便利商业发展，居民前往大型商超集中采购的频率下降。2021年前后，原有商超业态逐步衰退，客流减少，部分空间闲置。\n商超退出后，留下的并不是可以直接分割出租的标准办公区，而是一处面积较大、改造成本较高，并与楼上办公和周边街面相互嵌套的裙房空间。团队曾尝试餐饮与超市结合、新型农贸市场等方案。负责人李海涛回忆道：“（团队）前后做过五六版方案，但最终都难以算清这笔商业账”。\n继续经营传统商业，收入未必稳定；改为普通写字楼，虽风险相对较低，却难以发挥毗邻清华大学和清华科技园的区位优势。\n资金悬空：谁为不确定的转型先行担责\n确定人工智能产业方向后，资金成为最直接的难题。改造不仅需要翻新办公区域，还要建设展厅、会议室、路演区和共享空间。部分原本可出租的面积需要转为公共展示和交流空间，短期内会减少租金收入。李海涛直言：“资金，这个问题永远绕不开。”\n东升大厦产权属于东升镇镇属集体企业，北京东升农工商总公司负责资产经营，博展物业负责物业和出租，东升镇负责属地统筹。产权主体要保证集体资产安全，运营方要控制改造成本和客户流失，属地政府则要考虑楼宇能否承接区域人工智能产业发展。若改造后招商不及预期，前期投入和后续运营压力都将落在相关主体身上。\n租户未退：如何在经营中完成更新\n“罗马不是一天建成的。”改造也是如此。楼内仍有企业办公，部分商业仍在经营，整栋楼并非像外界想象的那样，随着商户的更替便可轻易腾空。施工噪声、围挡、通行变化会直接影响租户日常工作和经营。一次性清空后施工，工程推进较快，但会集中终止租赁关系，也会使经营收入突然中断。边经营边改造能够减轻一次性腾退压力，却会延长工期，增加安全、施工和沟通成本。\n更重要的是，原有租户与未来人工智能企业的需求并不相同。原商户和企业关心租约、搬迁和经营连续性。新进入企业则希望获得适合研发创业的办公空间，以及政策、算力、融资和场景对接等服务。如何在调整租户结构时保留合理空间、减少摩擦，成为转型能否推进的关键。\n转型的难处由此落到同一张桌面上。原有租户希望租约、搬迁和经营连续性得到保障，产权主体需要守住集体资产安全，运营方要在施工、招商和现金流之间维持平衡，属地政府则希望旧楼能够承接新的城市功能。继续经营可以保住眼前收益，却难以扭转空间衰退；整体清空有利于快速施工，却会集中放大租户损失和经营中断。谁先承担不确定性，谁为退出者提供过渡，成为改造启动前必须作出的选择。",
+      "source": "团队案例分析报告（完整正文）",
+      "keywords": [
+        "旧困",
+        "商超退潮",
+        "旧楼失去旧答案"
+      ]
+    },
+    {
+      "title": "二、破局：押上收益，渐进更新",
+      "text": "（一）舍弃熟路：旧楼转向交往型空间\n面对商超衰退，东升镇、东升农工商总公司和博展物业没有简单恢复传统商业，也没有将裙房全部改成普通写字楼，而是将人工智能确定为新的发展方向。作出这一选择，既考虑到楼宇闲置问题，也考虑到五道口周边高校、科研机构和科技企业集聚的条件。\n楼宇寻找新用途时，北京和海淀的政策方向已经发生变化。2021年发布的《北京市城市更新行动计划（2021—2025年）》提出，城市建设由增量开发转向存量更新，聚焦建成区存量空间提质增效，以城市更新促进产业转型升级，并明确不搞大拆大建。同年，海淀区“十四五”规划将人工智能列入前沿信息产业重点方向，提出建设特色产业新空间，推动东升科技园重点发展人工智能、大数据等前沿产业。商超退潮与政策转向在这一时期交叠，继续维持低效传统商业已难以回应区域功能调整，利用既有楼宇承接科技创新则逐渐成为具有政策依据的选择。\n此后，政策引导进一步转化为可操作的制度条件。2022年11月通过、2023年3月施行的《北京市城市更新条例》，将老旧低效楼宇、低效产业园区和传统商业设施纳入产业类城市更新，明确区政府统筹、街镇组织、物业权利人实施以及市场主体参与的基本关系。2023年5月，北京市又发布《北京市加快建设具有全球影响力的人工智能创新策源地实施方案（2023—2025年）》，提出发挥北京人工智能创新资源优势，推动创新要素高效配置和产业集群发展。一个月后，东升大厦局部改造正式开工。\n东升镇副镇长赵炜表示，“传统商业已经不能够满足整个区域发展的需求，海淀建设科技创新中心就需要有相应的载体，最终目的是为了人的美好生活”。东升大厦由此不再只承担出租功能，而是开始承接人工智能企业孵化、展示、交流和资源对接等需求。后续改造中，原商超裙房被调整为展厅、路演空间、共享办公区和企业服务空间，为旧空间找到新的使用方向。\n（二）押上收益：集体经济承担首轮风险\n第一阶段改造主要由集体经济主体先行承担。项目以未来五年经营收益为支撑，贷款约1亿元；原有资金约七八千万元，扣除日常支出后，实际可投入改造的资金约5000万元。2023年6月30日，东升大厦裙房一至三层局部区域开工改造，改造面积约10665平方米。改造一旦启动，集体经济主体既要承担还本付息压力，也要面对新空间能否形成持续需求的不确定性。\n不同主体分别承担相应任务。东升农工商总公司负责资产经营和资金安排，博展物业负责施工、物业与出租，东升镇统筹产业方向、集体资产监管和属地资源。这样的分工并没有消除风险，但避免了由单一主体独自承担。产权主体提供资产基础，运营方负责具体落地，属地政府将楼宇更新与区域产业方向衔接起来，共同支撑改造启动。\n（三）边营边改：既有利益与未来功能同步协调\n为减少对既有租户的冲击，运营方没有采取整体清空的方式，而是选择分段施工、边营边改。“我们没有采取全部清空后重新建设，而是采用逐步更新”，李海涛这样说道，“重点在于平衡既有利益和未来利益”。\n施工过程中，运营人员根据工程进度调整通行安排，并向受影响客户提供冷饮等补偿性服务。这些细节不能完全解决合同和经营问题，却让施工方与租户保持持续沟通。租户调整也采取分类方式。能够适应人工智能产业方向的企业尽量保留，有转型条件的企业帮助对接资源，难以衔接新定位的商户和机构则逐步迁出。正如运营团队自己所说，这是一种“软硬结合”的办法，“硬的一面是清退，软的一面是帮助有条件的企业转型”。\n通过空间重置、风险分担和渐进协调，东升大厦完成了从传统商超楼宇向人工智能创新空间的第一轮转变。这轮改造解决了旧楼如何重新运转，却也改变了进入空间的人群、资源和利益关系。企业需要高密度连接，运营方需要持续收益，政府希望更新改善城市功能，原有租户则在退出与转型中承担成本。随着楼宇重新聚拢人气，治理问题也从一栋楼的资产更新走向更广阔的街区。",
+      "source": "团队案例分析报告（完整正文）",
+      "keywords": [
+        "破局",
+        "押上收益",
+        "渐进更新"
+      ]
+    },
+    {
+      "title": "三、新局：旧楼焕新，街区生长",
+      "text": "（一）楼门打开：黄金铺面让位于交往空间\n2026年夏天，中关村东路8号已很难看出旧商超的模样。一层展厅里，机械臂制作咖啡，机器人在体验区抓取商品；青年创业者在开放工位敲击键盘，也有人围坐在咖啡桌边讨论项目。绕到大厦后侧，过去的锅炉房已经改作“投资人酒吧”。办公、展示和社交被压缩在同一栋楼里，曾经依靠购物客流维持运转的空间，开始以人与人的连接重新聚拢人气。\n这场变化以一层四千余平方米空间的重新分配为起点。五道口核心地段的一层铺面具有较高租赁价值，运营方却只保留少量商业面积，其余空间用于展陈、会客和交流。李海涛算过这笔账：“如果全部用于普通租赁，就不会形成原点社区今天的集聚效应和影响力。”放弃一部分即时租金，换取企业展示、创业者交往和公众进入的空间，成为旧楼转型后的第一套运行逻辑。\n（二）资源相遇：创业者在近校街区形成网络\n楼内空间改变后，企业之间的关系也随之变化。初创团队可以从开放工位起步，由运营人员对接算力、政策、法务、融资和上下游企业；产品形成雏形后，又可以进入展厅、咖啡空间和小型体验场景接受使用反馈。原点学堂持续举办课程、路演、沙龙和AI Hub活动，投资人、科学家、企业员工与创业者在同一空间反复相遇。\n一位创业团队成员把吸引力归结为资源密度：“核心在于这里集聚了投资方、优秀创业团队和科学家。”对创业者而言，改造的价值首先不是建筑焕新，而是能够步行往返高校、办公空间和交流活动，并在面对面接触中找到合作伙伴。许多团队的创始人与清华、北大及周边科研机构保持联系，这种物理邻近很难完全由线上交流替代。\n（三）一楼渐满：单体楼宇长成创新街区\n企业和活动不断进入后，一栋楼逐渐盛不下新增需求。原点大厦与东源大厦、智源大厦、优盛大厦等载体被纳入五道口人工智能产业园，清华科技园及周边创新空间又被连接为约3平方公里的AI原点社区。到2026年前后，街区集聚企业已超过400家，人工智能企业占比超过七成；核心区域日均往来人数由改造前约1200人次增至7000余人次，全年举办沙龙、研讨和路演等活动120余场。\n楼宇更新由此产生了两种同时发生的结果。对集体经济主体和运营方，闲置空间重新形成稳定需求；对企业和创业者，分散的政策、知识和合作资源获得了接触入口；对海淀区和东升镇，一处存量楼宇开始承担创新街区和城市更新节点的功能。随着人群、活动和资源越出楼宇，原本由单一产权主体主导的改造，也被推向道路、建筑前区、周边园区和居住社区共同构成的城市空间。",
+      "source": "团队案例分析报告（完整正文）",
+      "keywords": [
+        "新局",
+        "旧楼焕新",
+        "街区生长"
+      ]
+    },
+    {
+      "title": "四、新困：人群汇集，价值分岔",
+      "text": "（一）同一片空间：不同人看见不同价值\n原点大厦的一层空间，在不同主体眼中并不是同一种资源。运营方看重它能否连接企业并反过来支撑资产持续运营；创业者希望在这里获得低成本工位、知识交流和合作机会；政府则希望旧楼更新能够改善城市功能，并使创新资源进入更开放的街区生活。东升镇副镇长赵炜将这种定位说得很清楚：“这里不是单纯的党群活动中心。作为科创载体，首要任务仍是服务企业和创新人才。”与此同时，他也强调，科技创新最终仍要回到人的生活。\n价值排序的差异由此进入日常运营。若把黄金铺面全部出租，集体资产可以获得更直接的租金。若持续保留展厅、学堂和休闲区域，运营方则要承担机会成本和维护支出。企业关注资源对接是否迅速，员工在意办公、交往和生活是否便利，普通公众关心的却是空间能否进入、道路是否安全、活动是否与自身有关。同一项更新，对不同群体意味着不同收益，也对应不同成本。\n（二）人流漫出楼宇：公共空间先承受压力\n当日均数千人次的办公、参访和配送需求汇集到街区，楼内形成的活力首先在楼外表现为通行压力。东升大厦前广场、成府路沿线和华源世纪商务楼周边一度被电动车、共享单车和外卖车辆占据，人行步道又被绿化带和不同地块的建筑前区切断。一位在此通勤的市民说：“以前从地铁站出来走着走着步道就断了，要么被绿化带挡住，要么得绕到马路上，很不安全。”\n道路、楼前广场和内部退界空间分属不同管理范围。对楼宇产权主体，开放内部空间意味着让出经营和管理边界；对城市管理部门，停车和步行问题需要跨越多处产权地块统筹；对企业员工、外卖骑手、附近居民和过路行人，最直接的诉求则是安全通行空间。创新街区所创造的活力，开始要求原有产权边界为公共使用重新作出安排。\n（三）三公里同名：核心与周边仍隔一层（不确定是否保留）\n空间范围扩大后，资源并未随名称同步均匀分布。一位创业团队成员观察到：“资源和投入目前仍主要集中在原点大厦核心区域。向外辐射会有，但更多体现为间接、侧面的影响。”原点学堂等科创活动主要位于原点大厦及邻近载体，核心之外的园区、街区和居住社区尚缺少稳定的资源传递渠道。\n周边居民对这场更新的感知也并不一致。华清园一位帮助子女照看孩子的老人很少参加社区活动，她说：“我们年龄大了，对AI这些事情不太关注。”华清园物业工作人员则直言：“原点社区和我们是两个不同的主体，我们分别开展自己的工作。”居民可以进入部分开放空间，也有人带孩子前来休闲和体验，但居住社区的服务体系、参与渠道与创新街区的运营网络仍各自运行。对谁开放、由谁持续组织、哪些群体真正获益，成为空间公共性继续向外延伸时无法回避的问题。",
+      "source": "团队案例分析报告（完整正文）",
+      "keywords": [
+        "新困",
+        "人群汇集",
+        "价值分岔"
+      ]
+    },
+    {
+      "title": "五、再破局：围墙后退，协同扩围",
+      "text": "（一）平台居中：多元主体有了共同接口\n街区扩展首先要求组织关系随之调整。AI原点社区核心区域约13万平方米的集体资产由三家股份社参与运营，扩展至3平方公里后，还涉及高校园区、其他企业和不同产权单位。东升镇推动成立北京原点社区科创生态服务有限公司，承担政策传达、方向协调、活动统筹和资源连接，为分散主体提供共同接口。重大事项由东升镇统筹，集体企业和专业运营团队分别承担资产、空间和企业服务事项。\n这一平台可以组织东升镇集体经济体系内的资源，却不能直接支配其他产权主体的资产。街区因此不是由单一管理者封闭运行，而是在政府引导、集体经济组织投入、运营机构执行、企业参与和公共部门协同中逐步形成。每向外扩展一个节点，空间开放、设施维护和成本分担都要重新协商。治理场域由此随行动形成，也始终受到权属和行政边界约束。\n（二）围墙后退：产权空间接入城市通行\n通行压力促成了楼宇之外的第一次联合行动。海淀区城市管理委、区交通委与东升镇围绕东升大厦、东源大厦和华源世纪商务楼三个节点推进环境整治，将公共道路、建筑前区和产权内部退界空间一并纳入方案。2026年6月，约1.7万平方米公共空间完成整治；项目拆除围墙围栏270米，释放产权内部空间约4700平方米，新增16处非机动车停放区域，挖潜、规范停车位1080个。\n通过打开隔离绿篱，新建和修复871米人行步道，地铁站、清华科技园与京张铁路遗址公园之间的步行路径重新连通。曾经封闭的建筑前区开始承担停放、等候和通行功能。对产权主体，这意味着让渡部分内部空间；对通勤者、骑手、居民和访客，更新则转化为可以直接使用的道路与场所。公共价值不再只停留在街区定位中，而是首先表现为每天都能经过和使用的空间。\n（三）学堂开门：专业知识走向社会公众\n物理边界打开后，原点社区继续尝试让知识和活动越出专业网络。原点学堂被纳入海淀夜校教学点，课程由人工智能技术延伸至财务管理和创业实务。东升镇与高校合作开设讲堂，并通过科技文化市集、体验活动和公开课程，为青年群体、周边居民等普通公众提供进入入口。原点大厦还承接面向退役军人、青年科技工作者等群体的专题活动，使企业会议和产品展示空间同时承担学习与社会交往功能。\n公众进入并未自动消除价值差异。创业者需要更专业、更高频的资源对接，居民更关心活动是否适合家庭，运营方还要考虑课程组织和空间维护能否持续。夜校、市集和体验活动把不同人群带入同一空间，也把“谁的需求优先、何种收益值得共同投入”的问题带入街区运行。\n（四）一核连带：创新资源沿“两区一带”延展\nAI原点社区的示范作用被纳入更大的城市布局。海淀区“十五五”规划将北京AI原点社区、中关村AI北纬社区和百年京张AI创新带共同纳入“两区一带”人工智能创新生态圈。原点社区承担南部技术创新策源和街区示范功能，北纬社区连接北部科研与产业资源，百年京张AI创新带则沿京张轴线串联南北两端及周边创新空间。\n由一栋旧楼启动的更新，开始被放入海淀全域空间结构之中。原点社区向学北园、东升三期等周边节点延伸，存量空间更新、公共空间开放、多产权协商和公众活动组织等做法也随之进入新的场域。扩散的并非一套固定建筑方案，而是使高校、园区、街区和公共文化空间能够发生连接的组织方式。其示范意义能否成立，仍取决于不同节点能否识别不同群体所需要的价值，而不是简单复制核心区的资源配置。",
+      "source": "团队案例分析报告（完整正文）",
+      "keywords": [
+        "再破局",
+        "围墙后退",
+        "协同扩围"
+      ]
+    },
+    {
+      "title": "六、展望：由点及面，治理再启",
+      "text": "从商超退场后的旧楼，到人群和资源汇集的人工智能创新街区，再到“两区一带”中的南部核心，AI原点社区不断越出原有楼宇边界。东升镇、集体经济组织和运营团队通过空间重置、风险共担与渐进协调完成首轮更新，区级部门、产权单位、企业和公众又围绕道路、活动与开放空间进入新的协同行动。创新街区由此成为不同主体共同使用空间、表达需求并调整关系的治理场域。\n但这个场域尚未形成统一答案。政府期待城市功能改善与创新资源外溢，集体经济主体和运营方关注资产安全与持续运营，创业者重视近校区位、低成本空间和知识连接，周边居民与普通公众更直接地感受通行安全、活动可及和日常生活是否便利。多元主体如何在存量空间更新和街区扩展中协同形成兼具创新承载与公共开放功能的治理场域？当不同群体对有价值的结果具有不同识别时，AI原点社区所追求的公共价值究竟包括什么，又如何转化为可共享、可持续的城市生活成果？这也是智能街区走向智能社会治理样板、AI原生城市由技术构想进入社会运行所必须回答的问题。",
+      "source": "团队案例分析报告（完整正文）",
+      "keywords": [
+        "展望",
+        "由点及面",
+        "治理再启"
+      ]
+    },
+    {
+      "title": "参考性问题",
+      "text": "商超退潮后，东升镇与集体经济运营主体为何选择承担不确定性并推进转型？\n政府、集体经济组织、运营方、入驻企业和公众如何在空间更新中形成协同治理场域？\n不同主体分别识别出哪些公共价值，这些价值之间存在哪些一致与冲突？\nAI原点社区走向智能社会治理样板，还需要形成哪些制度条件？",
+      "source": "团队案例分析报告（完整正文）",
+      "keywords": [
+        "参考性问题"
+      ]
+    }
+  ]
+}
